@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Haunted Bicycle — Skill Weaver Engineering Journal</title>
+  <meta name="description" content="The engineering journal of the Skill Weaver project: architecture decisions, debugging stories, adaptive assessment research, and deployment lessons.">
+  <link rel="canonical" href="https://hauntedbicycle.dev/index.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Haunted Bicycle — Skill Weaver Engineering Journal">
+  <meta property="og:description" content="Architecture decisions, debugging stories, and adaptive assessment research, told through Monster, Spider, and Bicycle.">
+  <meta property="og:url" content="https://hauntedbicycle.dev/index.html">
+  <meta property="og:image" content="https://hauntedbicycle.dev/assets/images/og-default.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Haunted Bicycle — Skill Weaver Engineering Journal">
+  <meta name="twitter:description" content="Architecture decisions, debugging stories, and adaptive assessment research, told through Monster, Spider, and Bicycle.">
+  <meta name="twitter:image" content="https://hauntedbicycle.dev/assets/images/og-default.png">
+
+  <link rel="alternate" type="application/rss+xml" title="The Haunted Bicycle" href="/rss.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "The Haunted Bicycle",
+    "description": "The engineering journal of the Skill Weaver project.",
+    "url": "https://hauntedbicycle.dev/"
+  }
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/index.html">
+      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
+      <span class="brand__text">
+        <span class="brand__title">The Haunted Bicycle</span>
+        <span class="brand__eyebrow">Skill Weaver engineering journal</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list">
+        <span>Menu</span>
+      </button>
+      <ul class="site-nav__list" id="primary-nav-list">
+        <li><a class="nav-link" href="/index.html" aria-current="page">Home</a></li>
+        <li><a class="nav-link" href="/archive.html">Archive</a></li>
+        <li><a class="nav-link" href="/about.html">About</a></li>
+        <li><a class="nav-link" href="/contributors.html">Contributors</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="wrap hero">
+    <div>
+      <p class="hero__eyebrow">Field notes from the Skill Weaver project</p>
+      <h1>Software has ghosts.<br>We write about ours.</h1>
+      <p class="hero__lede">The Haunted Bicycle documents the architecture decisions, debugging stories, and adaptive assessment research behind Skill Weaver &mdash; told through a monster, a spider, and a bicycle that won't stay fixed.</p>
+      <div class="pill-row">
+        <a class="button button--primary" href="/archive.html">Read the archive</a>
+        <a class="button button--ghost" href="/about.html">What is this place?</a>
+      </div>
+    </div>
+    <div class="hero__art">
+      <img src="/assets/svg/hero-illustration.svg" alt="A small ghost monster pedals a bicycle whose rear wheel is spun from spider silk, trailing a dashed motion line." width="520" height="420">
+    </div>
+  </section>
+
+  <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
+
+  <!-- FEATURED -->
+  <section class="section section--tight wrap">
+    <div class="section__head">
+      <h2>Start here</h2>
+    </div>
+    <div class="grid grid--cards">
+      <a class="card card--featured" href="/posts/why-the-bicycle-is-haunted.html" data-reveal>
+        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="" width="200" height="200">
+        <div>
+          <div class="pill-row" style="margin-bottom: var(--space-xs);">
+            <span class="pill pill--craft">Craft</span>
+          </div>
+          <h3 class="card__title">Why the Bicycle Is Haunted</h3>
+          <p class="card__excerpt">A manifesto, of sorts: why we named a systems that gets built, breaks, and gets rebuilt after something with a mind of its own &mdash; and why every complex codebase eventually earns a ghost.</p>
+          <p class="card__meta"><span>Manju</span><span>&middot;</span><span>7 min read</span></p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- LATEST POSTS GRID -->
+  <section class="section section--tight wrap" id="latest">
+    <div class="section__head">
+      <h2>Latest posts</h2>
+      <a class="nav-link" href="/archive.html">View full archive &rarr;</a>
+    </div>
+    <div class="grid grid--cards">
+
+      <a class="card" href="/posts/why-the-bicycle-is-haunted.html" data-reveal>
+        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="" width="80" height="80" style="width:56px;height:56px;">
+        <div class="pill-row"><span class="pill pill--craft">Craft</span></div>
+        <h3 class="card__title">Why the Bicycle Is Haunted</h3>
+        <p class="card__excerpt">On naming a system after something that develops a mind of its own.</p>
+        <p class="card__meta"><span>Manju</span><span>&middot;</span><span>Jan 12, 2026</span></p>
+      </a>
+
+      <a class="card" href="/posts/three-nginx-files-enter-a-server.html" data-reveal>
+        <img class="card__art" src="/assets/svg/character-spider.svg" alt="" width="80" height="80" style="width:56px;height:56px;">
+        <div class="pill-row"><span class="pill pill--deployment">Deployment</span></div>
+        <h3 class="card__title">Three Nginx Files Enter a Server</h3>
+        <p class="card__excerpt">A deployment postmortem in three configuration files, one of which was lying to us.</p>
+        <p class="card__meta"><span>Jesus</span><span>&middot;</span><span>Jan 20, 2026</span></p>
+      </a>
+
+      <a class="card" href="/posts/pulling-one-thread-in-someone-elses-codebase.html" data-reveal>
+        <img class="card__art" src="/assets/svg/character-monster.svg" alt="" width="80" height="80" style="width:56px;height:56px;">
+        <div class="pill-row"><span class="pill pill--debugging">Debugging</span></div>
+        <h3 class="card__title">Pulling One Thread in Someone Else's Codebase</h3>
+        <p class="card__excerpt">What a scoring bug taught us about reading code we didn't write, calmly.</p>
+        <p class="card__meta"><span>Bricen</span><span>&middot;</span><span>Feb 3, 2026</span></p>
+      </a>
+
+    </div>
+  </section>
+
+  <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
+
+  <!-- CONTRIBUTOR PROFILES -->
+  <section class="section section--tight wrap">
+    <div class="section__head">
+      <h2>Who's writing this</h2>
+      <a class="nav-link" href="/contributors.html">All contributors &rarr;</a>
+    </div>
+    <div class="grid grid--cards">
+      <div class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/character-spider.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">Pedagogy &middot; Adaptive Assessment &middot; AI</p>
+          <h3 class="card__title" style="font-size: var(--step-0);">Manju</h3>
+        </div>
+      </div>
+      <div class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/character-bicycle.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">DevOps &middot; Linux &middot; Docker &middot; Deployment</p>
+          <h3 class="card__title" style="font-size: var(--step-0);">Jesus</h3>
+        </div>
+      </div>
+      <div class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/character-monster.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">Frontend &middot; Debugging &middot; Implementation</p>
+          <h3 class="card__title" style="font-size: var(--step-0);">Bricen</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHIVE PREVIEW / CATEGORIES -->
+  <section class="section section--tight wrap" id="categories">
+    <div class="section__head">
+      <h2>Categories</h2>
+    </div>
+    <div class="pill-row">
+      <a class="pill pill--architecture" href="/archive.html">Architecture</a>
+      <a class="pill pill--debugging" href="/archive.html">Debugging</a>
+      <a class="pill pill--assessment" href="/archive.html">Adaptive Assessment</a>
+      <a class="pill pill--deployment" href="/archive.html">Deployment</a>
+      <a class="pill pill--craft" href="/archive.html">Craft</a>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER PLACEHOLDER -->
+  <section class="wrap section--tight">
+    <div class="newsletter">
+      <div>
+        <h3 style="font-size: var(--step-0);">Get new posts by email</h3>
+        <p style="color: var(--color-slate); font-size: var(--step--1); margin-top: var(--space-2xs);">Placeholder &mdash; not wired to a provider yet. See README.</p>
+      </div>
+      <form class="newsletter__form" onsubmit="return false;">
+        <label class="visually-hidden" for="newsletter-email">Email address</label>
+        <input id="newsletter-email" type="email" placeholder="you@example.com" disabled>
+        <button class="button button--primary" type="submit" disabled>Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <a class="brand" href="/index.html" style="color:var(--color-paper); margin-bottom: var(--space-sm); display:inline-flex;">
+        <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
+        <span class="brand__title">The Haunted Bicycle</span>
+      </a>
+      <p class="site-footer__note">The engineering journal of the Skill Weaver project. Architecture decisions, debugging stories, and adaptive assessment research, told through Monster, Spider, and Bicycle.</p>
+    </div>
+    <div>
+      <p class="site-footer__heading">Read</p>
+      <ul class="site-footer__list">
+        <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/rss.xml">RSS feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer__heading">Project</p>
+      <ul class="site-footer__list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contributors.html">Contributors</a></li>
+        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>&copy; <span id="year">2026</span> The Skill Weaver Project. Built with plain HTML, CSS, and JS.</span>
+    <span>Hosted on GitHub Pages.</span>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — The Haunted Bicycle</title>
+  <meta name="description" content="Every post from The Haunted Bicycle, the Skill Weaver engineering journal.">
+  <link rel="canonical" href="https://hauntedbicycle.dev/archive.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Archive — The Haunted Bicycle">
+  <meta property="og:description" content="Every post from The Haunted Bicycle, the Skill Weaver engineering journal.">
+  <meta property="og:url" content="https://hauntedbicycle.dev/archive.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="alternate" type="application/rss+xml" title="The Haunted Bicycle" href="/rss.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/index.html">
+      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
+      <span class="brand__text">
+        <span class="brand__title">The Haunted Bicycle</span>
+        <span class="brand__eyebrow">Skill Weaver engineering journal</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list"><span>Menu</span></button>
+      <ul class="site-nav__list" id="primary-nav-list">
+        <li><a class="nav-link" href="/index.html">Home</a></li>
+        <li><a class="nav-link" href="/archive.html" aria-current="page">Archive</a></li>
+        <li><a class="nav-link" href="/about.html">About</a></li>
+        <li><a class="nav-link" href="/contributors.html">Contributors</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap section--tight">
+    <p class="hero__eyebrow">Everything we've written</p>
+    <h1>Archive</h1>
+    <p class="hero__lede">In reverse chronological order. Filtering by category and tag search are on the roadmap &mdash; see <a href="/about.html">About</a>.</p>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="pill-row" style="margin-bottom: var(--space-lg);" role="group" aria-label="Filter by category">
+      <span class="pill pill--architecture">Architecture</span>
+      <span class="pill pill--debugging">Debugging</span>
+      <span class="pill pill--assessment">Adaptive Assessment</span>
+      <span class="pill pill--deployment">Deployment</span>
+      <span class="pill pill--craft">Craft</span>
+    </div>
+
+    <div class="grid grid--cards">
+      <a class="card" href="/posts/pulling-one-thread-in-someone-elses-codebase.html">
+        <img class="card__art" src="/assets/svg/character-monster.svg" alt="" style="width:56px;height:56px;">
+        <div class="pill-row"><span class="pill pill--debugging">Debugging</span></div>
+        <h2 class="card__title">Pulling One Thread in Someone Else's Codebase</h2>
+        <p class="card__excerpt">What a scoring bug taught us about reading code we didn't write, calmly.</p>
+        <p class="card__meta"><span>Bricen</span><span>&middot;</span><span>Feb 3, 2026</span><span>&middot;</span><span>9 min</span></p>
+      </a>
+      <a class="card" href="/posts/three-nginx-files-enter-a-server.html">
+        <img class="card__art" src="/assets/svg/character-spider.svg" alt="" style="width:56px;height:56px;">
+        <div class="pill-row"><span class="pill pill--deployment">Deployment</span></div>
+        <h2 class="card__title">Three Nginx Files Enter a Server</h2>
+        <p class="card__excerpt">A deployment postmortem in three configuration files, one of which was lying to us.</p>
+        <p class="card__meta"><span>Jesus</span><span>&middot;</span><span>Jan 20, 2026</span><span>&middot;</span><span>8 min</span></p>
+      </a>
+      <a class="card" href="/posts/why-the-bicycle-is-haunted.html">
+        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="" style="width:56px;height:56px;">
+        <div class="pill-row"><span class="pill pill--craft">Craft</span></div>
+        <h2 class="card__title">Why the Bicycle Is Haunted</h2>
+        <p class="card__excerpt">A manifesto for naming a system after something with a mind of its own.</p>
+        <p class="card__meta"><span>Manju</span><span>&middot;</span><span>Jan 12, 2026</span><span>&middot;</span><span>7 min</span></p>
+      </a>
+    </div>
+
+    <nav class="pagination" aria-label="Archive pages">
+      <span>3 posts</span>
+      <ul class="pagination__pages">
+        <li><a href="/archive.html" aria-current="page">1</a></li>
+      </ul>
+      <span></span>
+    </nav>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <a class="brand" href="/index.html" style="color:var(--color-paper); margin-bottom: var(--space-sm); display:inline-flex;">
+        <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
+        <span class="brand__title">The Haunted Bicycle</span>
+      </a>
+      <p class="site-footer__note">The engineering journal of the Skill Weaver project.</p>
+    </div>
+    <div>
+      <p class="site-footer__heading">Read</p>
+      <ul class="site-footer__list">
+        <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/rss.xml">RSS feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer__heading">Project</p>
+      <ul class="site-footer__list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contributors.html">Contributors</a></li>
+        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>&copy; <span id="year">2026</span> The Skill Weaver Project.</span>
+    <span>Hosted on GitHub Pages.</span>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">The Haunted Bicycle logo mark: a wheel spun from a spider's web</title>
+  <circle cx="24" cy="24" r="22" fill="#F7F5F1" stroke="#30343B" stroke-width="1.5"/>
+  <g stroke="#248F8D" stroke-width="1.2" fill="none">
+    <line x1="24" y1="6" x2="24" y2="42"/>
+    <line x1="6" y1="24" x2="42" y2="24"/>
+    <line x1="10.7" y1="10.7" x2="37.3" y2="37.3"/>
+    <line x1="37.3" y1="10.7" x2="10.7" y2="37.3"/>
+    <circle cx="24" cy="24" r="7" />
+    <circle cx="24" cy="24" r="12.5" />
+    <circle cx="24" cy="24" r="17.5" />
+  </g>
+  <circle cx="24" cy="24" r="3" fill="#F28C28"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="bicycleTitle">
+  <title id="bicycleTitle">Bicycle, who stands in for the software system</title>
+  <circle cx="100" cy="100" r="96" fill="#F7F5F1"/>
+  <circle cx="66" cy="120" r="34" fill="none" stroke="#30343B" stroke-width="4"/>
+  <circle cx="140" cy="120" r="34" fill="none" stroke="#F28C28" stroke-width="4"/>
+  <g stroke="#30343B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M66 120 L 104 120 L 122 82 L 140 120"/>
+    <path d="M104 120 L 122 82 L 138 82"/>
+    <path d="M122 82 L 122 62"/>
+  </g>
+  <path d="M114 62 L 130 62" stroke="#30343B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M138 82 L 148 70 L 160 70" stroke="#30343B" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="104" cy="120" r="6" fill="#248F8D"/>
+  <g opacity="0.5" stroke="#66717E" stroke-width="1">
+    <circle cx="66" cy="120" r="10"/>
+    <circle cx="140" cy="120" r="10"/>
+  </g>
+</svg>

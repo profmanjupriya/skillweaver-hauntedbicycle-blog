@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — The Haunted Bicycle</title>
+  <meta name="description" content="Why The Haunted Bicycle exists, who Monster, Spider, and Bicycle are, and what's coming next.">
+  <link rel="canonical" href="https://hauntedbicycle.dev/about.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — The Haunted Bicycle">
+  <meta property="og:description" content="Why The Haunted Bicycle exists, and who Monster, Spider, and Bicycle are.">
+  <meta property="og:url" content="https://hauntedbicycle.dev/about.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/index.html">
+      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
+      <span class="brand__text">
+        <span class="brand__title">The Haunted Bicycle</span>
+        <span class="brand__eyebrow">Skill Weaver engineering journal</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list"><span>Menu</span></button>
+      <ul class="site-nav__list" id="primary-nav-list">
+        <li><a class="nav-link" href="/index.html">Home</a></li>
+        <li><a class="nav-link" href="/archive.html">Archive</a></li>
+        <li><a class="nav-link" href="/about.html" aria-current="page">About</a></li>
+        <li><a class="nav-link" href="/contributors.html">Contributors</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap wrap--prose section--tight">
+    <p class="hero__eyebrow">About this journal</p>
+    <h1>A journal that admits the codebase has ghosts</h1>
+    <p class="hero__lede">The Haunted Bicycle is the engineering journal of <strong>Skill Weaver</strong>, an adaptive assessment project. We write about the architecture decisions we made, the ones we regret, the debugging stories worth retelling, and the research behind adaptive testing &mdash; in public, as we go.</p>
+
+    <p>Most engineering blogs read like press releases: clean narratives where every decision was obviously correct in hindsight. Ours doesn't work that way, because software doesn't work that way. Every system we've built long enough has developed a personality &mdash; parts that groan under load, parts nobody remembers writing, parts that only work if you don't look at them directly. We started calling that personality a haunting, and the name stuck.</p>
+
+    <div class="pull-quote">
+      A system doesn't get haunted by accident. It gets haunted by everyone who touched it and left something behind.
+      <cite>&mdash; from the first commit message on this repo</cite>
+    </div>
+
+    <h2>The cast</h2>
+    <p>Three recurring characters carry the stories, each standing in for a role every project needs:</p>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="grid grid--cards">
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-monster.svg" alt="Monster, a round friendly creature with mismatched horns" style="width:96px;height:96px;">
+        <h3 class="card__title">Monster &mdash; the developer</h3>
+        <p class="card__excerpt">Well-meaning, occasionally the source of the haunting. Monster writes the code, reads the stack trace, and owns the consequences either way.</p>
+      </div>
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-spider.svg" alt="Spider, sitting at the center of a web" style="width:96px;height:96px;">
+        <h3 class="card__title">Spider &mdash; the algorithm</h3>
+        <p class="card__excerpt">Patient, precise, and indifferent to your intentions. Spider spins the logic that actually decides what happens, thread by thread.</p>
+      </div>
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="Bicycle, a two-wheeled system with mismatched wheels" style="width:96px;height:96px;">
+        <h3 class="card__title">Bicycle &mdash; the software system</h3>
+        <p class="card__excerpt">The thing you're actually riding. Built to move fast, prone to squeaks nobody can locate, held together by decisions made under deadline.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
+
+  <section class="wrap wrap--prose section--tight">
+    <h2>What we cover</h2>
+    <ul>
+      <li><strong>Architecture</strong> &mdash; decisions we made about how Skill Weaver is put together, and the tradeoffs behind them.</li>
+      <li><strong>Debugging</strong> &mdash; postmortems and stories from chasing down bugs, written while the details are still fresh.</li>
+      <li><strong>Adaptive assessment</strong> &mdash; the research behind item response theory, adaptive testing, and preserving instructor agency in assessment design.</li>
+      <li><strong>Deployment</strong> &mdash; the unglamorous, load-bearing work of keeping the thing running.</li>
+      <li><strong>Craft</strong> &mdash; reflections on how we work, not just what we shipped.</li>
+    </ul>
+
+    <h2>Who's behind it</h2>
+    <p>Three of us write here regularly &mdash; see the full <a href="/contributors.html">contributors page</a> for who covers what.</p>
+
+    <h2>What's next</h2>
+    <p>Full-text search, a tags index, syntax highlighting themes, series pages, and eventually transcripts from conference talks and a podcast. Roadmap details live in the repository README.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <a class="brand" href="/index.html" style="color:var(--color-paper); margin-bottom: var(--space-sm); display:inline-flex;">
+        <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
+        <span class="brand__title">The Haunted Bicycle</span>
+      </a>
+      <p class="site-footer__note">The engineering journal of the Skill Weaver project.</p>
+    </div>
+    <div>
+      <p class="site-footer__heading">Read</p>
+      <ul class="site-footer__list">
+        <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/rss.xml">RSS feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer__heading">Project</p>
+      <ul class="site-footer__list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contributors.html">Contributors</a></li>
+        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>&copy; <span id="year">2026</span> The Skill Weaver Project.</span>
+    <span>Hosted on GitHub Pages.</span>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

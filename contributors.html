@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contributors — The Haunted Bicycle</title>
+  <meta name="description" content="The three people writing The Haunted Bicycle, and what they cover.">
+  <link rel="canonical" href="https://hauntedbicycle.dev/contributors.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contributors — The Haunted Bicycle">
+  <meta property="og:url" content="https://hauntedbicycle.dev/contributors.html">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/index.html">
+      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
+      <span class="brand__text">
+        <span class="brand__title">The Haunted Bicycle</span>
+        <span class="brand__eyebrow">Skill Weaver engineering journal</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list"><span>Menu</span></button>
+      <ul class="site-nav__list" id="primary-nav-list">
+        <li><a class="nav-link" href="/index.html">Home</a></li>
+        <li><a class="nav-link" href="/archive.html">Archive</a></li>
+        <li><a class="nav-link" href="/about.html">About</a></li>
+        <li><a class="nav-link" href="/contributors.html" aria-current="page">Contributors</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap section--tight">
+    <p class="hero__eyebrow">The people behind the posts</p>
+    <h1>Contributors</h1>
+    <p class="hero__lede">Three people write here. Each has a lane, though the ghosts don't always respect it.</p>
+  </section>
+
+  <section class="wrap section--tight">
+    <div class="grid" style="gap: var(--space-lg);">
+
+      <article class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/character-spider.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">Pedagogy &middot; Adaptive Assessment &middot; AI</p>
+          <h2 class="card__title">Manju</h2>
+          <p class="card__excerpt">Writes about item response theory, adaptive testing design, and what it takes to keep instructor judgment in the loop as assessment gets more automated. The reason the spider thread runs through this whole project.</p>
+        </div>
+      </article>
+
+      <article class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/character-bicycle.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">DevOps &middot; Linux &middot; Docker &middot; Deployment</p>
+          <h2 class="card__title">Jesus</h2>
+          <p class="card__excerpt">Covers the infrastructure nobody notices until it breaks: servers, containers, CI, and the deployment pipeline that keeps Skill Weaver running at 2am without anyone getting paged.</p>
+        </div>
+      </article>
+
+      <article class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/character-monster.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">Frontend &middot; Debugging &middot; Implementation</p>
+          <h2 class="card__title">Bricen</h2>
+          <p class="card__excerpt">Writes the debugging postmortems and implementation notes &mdash; what it actually looked like to chase a bug through someone else's code, including the wrong turns.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="wrap wrap--prose section--tight">
+    <h2>Want to contribute?</h2>
+    <p>We use feature branches and pull requests, with one review required before merging. See <code>README.md</code> and <code>layouts/post-template.html</code> in the repository for the workflow and the post template. Issue and pull request templates are in <code>.github/</code>.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <a class="brand" href="/index.html" style="color:var(--color-paper); margin-bottom: var(--space-sm); display:inline-flex;">
+        <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
+        <span class="brand__title">The Haunted Bicycle</span>
+      </a>
+      <p class="site-footer__note">The engineering journal of the Skill Weaver project.</p>
+    </div>
+    <div>
+      <p class="site-footer__heading">Read</p>
+      <ul class="site-footer__list">
+        <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/rss.xml">RSS feed</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="site-footer__heading">Project</p>
+      <ul class="site-footer__list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contributors.html">Contributors</a></li>
+        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap site-footer__bottom">
+    <span>&copy; <span id="year">2026</span> The Skill Weaver Project.</span>
+    <span>Hosted on GitHub Pages.</span>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

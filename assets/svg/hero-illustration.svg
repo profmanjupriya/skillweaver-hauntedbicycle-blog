@@ -1,0 +1,78 @@
+<svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle heroDesc">
+  <title id="heroTitle">The Haunted Bicycle</title>
+  <desc id="heroDesc">A small ghost monster pedals a bicycle whose rear wheel is spun from spider silk, trailing a dashed motion line across a dotted paper ground.</desc>
+
+  <!-- ground -->
+  <line x1="20" y1="360" x2="500" y2="360" stroke="#DEDACF" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+
+  <!-- motion trail -->
+  <path d="M20 300 C 100 300, 120 320, 170 300" fill="none" stroke="#66717E" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" opacity="0.6"/>
+  <path d="M15 330 C 90 330, 110 345, 150 328" fill="none" stroke="#66717E" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- front wheel (ordinary) -->
+  <circle cx="185" cy="300" r="55" fill="none" stroke="#30343B" stroke-width="4"/>
+  <circle cx="185" cy="300" r="5" fill="#30343B"/>
+  <g stroke="#30343B" stroke-width="1.5">
+    <line x1="185" y1="300" x2="185" y2="248"/>
+    <line x1="185" y1="300" x2="185" y2="352"/>
+    <line x1="185" y1="300" x2="137" y2="300"/>
+    <line x1="185" y1="300" x2="233" y2="300"/>
+    <line x1="185" y1="300" x2="221" y2="264"/>
+    <line x1="185" y1="300" x2="149" y2="336"/>
+    <line x1="185" y1="300" x2="149" y2="264"/>
+    <line x1="185" y1="300" x2="221" y2="336"/>
+  </g>
+
+  <!-- rear wheel (spider's web) -->
+  <circle cx="365" cy="300" r="55" fill="none" stroke="#248F8D" stroke-width="4"/>
+  <g stroke="#248F8D" stroke-width="1.2" fill="none" opacity="0.9">
+    <line x1="365" y1="245" x2="365" y2="355"/>
+    <line x1="310" y1="300" x2="420" y2="300"/>
+    <line x1="326" y1="261" x2="404" y2="339"/>
+    <line x1="404" y1="261" x2="326" y2="339"/>
+    <circle cx="365" cy="300" r="15"/>
+    <circle cx="365" cy="300" r="28"/>
+    <circle cx="365" cy="300" r="41"/>
+  </g>
+  <circle cx="365" cy="300" r="5" fill="#248F8D"/>
+
+  <!-- frame -->
+  <g stroke="#30343B" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M185 300 L 265 300 L 305 210 L 365 300"/>
+    <path d="M265 300 L 305 210 L 340 210"/>
+    <path d="M305 210 L 305 175"/>
+  </g>
+  <!-- seat -->
+  <path d="M295 175 L 320 175" stroke="#30343B" stroke-width="6" stroke-linecap="round"/>
+  <!-- handlebar -->
+  <path d="M340 210 L 355 195" stroke="#30343B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M355 195 L 375 195" stroke="#30343B" stroke-width="4" stroke-linecap="round"/>
+  <!-- pedal crank -->
+  <circle cx="265" cy="300" r="8" fill="#F28C28"/>
+  <line x1="265" y1="300" x2="285" y2="318" stroke="#F28C28" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- monster rider (small, round, friendly ghost-developer) -->
+  <g>
+    <path d="M285 175 C 285 150, 325 150, 325 175 L 325 205 C 325 212, 318 212, 315 206 C 312 213, 305 213, 302 206 C 299 213, 292 213, 289 206 C 286 212, 285 210, 285 205 Z" fill="#30343B" opacity="0.92"/>
+    <circle cx="298" cy="172" r="4" fill="#F7F5F1"/>
+    <circle cx="313" cy="172" r="4" fill="#F7F5F1"/>
+    <circle cx="298" cy="172" r="1.6" fill="#30343B"/>
+    <circle cx="313" cy="172" r="1.6" fill="#30343B"/>
+    <path d="M300 182 Q 305 186 310 182" stroke="#F7F5F1" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    <path d="M283 168 C 279 172, 279 182, 285 185" stroke="#30343B" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M327 168 C 333 176, 331 192, 320 198" stroke="#30343B" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- little spider walking a thread up top -->
+  <g transform="translate(430,90)">
+    <line x1="0" y1="-40" x2="0" y2="0" stroke="#66717E" stroke-width="1" stroke-dasharray="2 4"/>
+    <circle cx="0" cy="6" r="7" fill="#30343B"/>
+    <circle cx="0" cy="-3" r="4" fill="#30343B"/>
+    <g stroke="#30343B" stroke-width="1.4" stroke-linecap="round">
+      <line x1="-6" y1="4" x2="-14" y2="-2"/>
+      <line x1="-6" y1="8" x2="-15" y2="10"/>
+      <line x1="6" y1="4" x2="14" y2="-2"/>
+      <line x1="6" y1="8" x2="15" y2="10"/>
+    </g>
+  </g>
+</svg>

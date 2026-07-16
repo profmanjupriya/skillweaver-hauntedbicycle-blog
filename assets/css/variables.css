@@ -1,0 +1,82 @@
+/* ============================================================
+   THE HAUNTED BICYCLE — DESIGN TOKENS
+   Skill Weaver engineering journal
+   ============================================================ */
+
+:root {
+  /* ---- Color: brand palette (spec section 5) ---- */
+  --color-orange: #F28C28;
+  --color-orange-dim: #C96F17;
+  --color-teal: #248F8D;
+  --color-teal-dim: #1B6A68;
+  --color-charcoal: #30343B;
+  --color-charcoal-deep: #22252A;
+  --color-slate: #66717E;
+  --color-paper: #F7F5F1;
+  --color-paper-dim: #EEEAE1;
+  --color-paper-line: #DEDACF;
+
+  /* Semantic aliases */
+  --color-bg: var(--color-paper);
+  --color-bg-raised: #FFFFFF;
+  --color-text: var(--color-charcoal);
+  --color-text-muted: var(--color-slate);
+  --color-accent: var(--color-orange);
+  --color-accent-secondary: var(--color-teal);
+  --color-link: var(--color-teal-dim);
+  --color-border: var(--color-paper-line);
+  --color-focus: var(--color-orange);
+
+  /* Dark surfaces (footer, code blocks) */
+  --color-dark-bg: var(--color-charcoal-deep);
+  --color-dark-text: var(--color-paper);
+  --color-dark-text-muted: #9AA3AD;
+
+  /* ---- Type ---- */
+  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+  --step-0:  clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1:  clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
+  --step-2:  clamp(1.5rem, 1.3rem + 0.9vw, 1.9rem);
+  --step-3:  clamp(1.9rem, 1.6rem + 1.4vw, 2.6rem);
+  --step-4:  clamp(2.4rem, 1.9rem + 2.4vw, 3.6rem);
+  --step-5:  clamp(3rem, 2.2rem + 3.8vw, 5rem);
+
+  /* ---- Space ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+
+  /* ---- Layout ---- */
+  --content-width: 42rem;
+  --wide-width: 72rem;
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --border-thin: 1px solid var(--color-border);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 600ms;
+
+  /* ---- Breakpoints (referenced in comments, used via media queries) ----
+     480 / 768 / 1024 / 1440 */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}
