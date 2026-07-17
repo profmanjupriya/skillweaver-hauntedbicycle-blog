@@ -57,6 +57,11 @@
   width: 100%;
 }
 
+.hero__copy .pill-row {
+  justify-content: center;
+  gap: var(--space-md);
+}
+
 .hero__art {
   width: 100%;
   max-width: 520px;
@@ -180,6 +185,56 @@ button.pill {
 }
 
 .is-hidden { display: none !important; }
+
+/* ---- Start here (homepage featured lead, no card chrome) ---- */
+
+.start-here {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  max-width: 42rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.start-here__art {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.start-here__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  min-width: 0;
+}
+
+.start-here__title {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.start-here__excerpt {
+  color: var(--color-slate);
+  font-size: var(--step-0);
+  max-width: none;
+  margin: 0;
+}
+
+.start-here:hover .start-here__title,
+.start-here:focus-visible .start-here__title {
+  color: var(--color-orange-dim);
+}
+
+@media (max-width: 480px) {
+  .start-here {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 /* ---- Article cards ---- */
 
