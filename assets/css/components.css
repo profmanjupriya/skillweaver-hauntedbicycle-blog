@@ -111,6 +111,19 @@
   padding-block-start: var(--space-2xs);
 }
 
+/* Archive / Contributors: minimal gap between page intro and next section */
+.page-compact > .section--tight:first-child {
+  padding-block: var(--space-sm) var(--space-2xs);
+}
+
+.page-compact > .section--tight:first-child .hero__lede {
+  margin-bottom: 0;
+}
+
+.page-compact > .section--tight:nth-child(2) {
+  padding-block-start: var(--space-2xs);
+}
+
 /* ---- Buttons ---- */
 
 .button {

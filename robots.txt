@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hauntedbicycle.dev/sitemap.xml
+Sitemap: https://blog.skill-weaver.com/sitemap.xml
