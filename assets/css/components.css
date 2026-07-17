@@ -111,7 +111,7 @@
   padding-block-start: var(--space-2xs);
 }
 
-/* Archive / Contributors: minimal gap between page intro and next section */
+/* Archive / About / Contributors: minimal gap between intro, divider, content */
 .page-compact > .section--tight:first-child {
   padding-block: var(--space-sm) var(--space-2xs);
 }
@@ -120,8 +120,20 @@
   margin-bottom: 0;
 }
 
-.page-compact > .section--tight:nth-child(2) {
+.page-compact > .section--tight:first-child + .wrap .thread-divider {
+  margin-block: var(--space-2xs);
+}
+
+.page-compact > .section--tight:first-child + .wrap + .section--tight {
   padding-block-start: var(--space-2xs);
+}
+
+.page-compact .thread-divider {
+  margin-block: var(--space-2xs);
+}
+
+.page-compact .section--tight {
+  padding-block: var(--space-sm);
 }
 
 /* ---- Buttons ---- */

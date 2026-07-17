@@ -7,159 +7,128 @@
   <meta name="description" content="Why The Haunted Bicycle exists, who Monster, Spider, and Bicycle are, and what's coming next.">
   <link rel="canonical" href="https://hauntedbicycle.dev/about.html">
   <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
-
   <meta property="og:type" content="website">
   <meta property="og:title" content="About — The Haunted Bicycle">
   <meta property="og:description" content="Why The Haunted Bicycle exists, and who Monster, Spider, and Bicycle are.">
   <meta property="og:url" content="https://hauntedbicycle.dev/about.html">
   <meta name="twitter:card" content="summary">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    * { margin: 0; }
-    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-        scroll-behavior: auto !important;
-      }
-    }
-    body { margin: 0; font-family: 'Source Serif 4', 'Iowan Old Style', Georgia, serif; font-size: 18px; line-height: 1.65; color: #30343B; background-color: #F7F5F1; background-image: radial-gradient(circle at 1px 1px, #DEDACF 1px, transparent 0); background-size: 28px 28px; min-height: 100vh; }
-    img, picture, svg { display: block; max-width: 100%; }
-    h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em; color: #30343B; }
-    h1 { font-size: clamp(2.4rem, 1.9rem + 2.4vw, 3.6rem); }
-    h2 { font-size: clamp(1.9rem, 1.6rem + 1.4vw, 2.6rem); }
-    h3 { font-size: clamp(1.5rem, 1.3rem + 0.9vw, 1.9rem); }
-    h4 { font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); }
-    p { max-width: 70ch; }
-    a { color: #1B6A68; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
-    a:hover { color: #C96F17; }
-    ul, ol { padding-left: 1.3em; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
 </head>
 <body>
 
-<a class="skip-link" href="#main" style="position: absolute; left: 16px; top: -100px; background: #30343B; color: #F7F5F1; padding: 12px 24px; border-radius: 3px; z-index: 100; transition: top 150ms cubic-bezier(0.16,1,0.3,1);">Skip to content</a>
-
-<header style="position: sticky; top: 0; z-index: 40; background: rgba(247,245,241,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid #DEDACF;">
-  <div style="max-width: 1152px; margin-inline: auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
-    <a href="/index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #30343B;">
-      <div style="display: flex; flex-direction: column; line-height: 1.1;">
-        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">The Haunted Bicycle</span>
-        <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase; color: #1B6A68;">Skill Weaver engineering journal</span>
-      </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/index.html">
+      <span class="brand__text">
+        <span class="brand__title">The Haunted Bicycle</span>
+        <span class="brand__eyebrow">Skill Weaver engineering journal</span>
+      </span>
     </a>
-    <nav aria-label="Primary" style="display: flex; align-items: center;">
-      <ul style="display: flex; list-style: none; gap: 32px; padding: 0; margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 14px;">
-        <li><a href="/index.html" style="text-decoration: none; color: #30343B; padding: 8px 0; border-bottom: 2px solid transparent;">Home</a></li>
-        <li><a href="/archive.html" style="text-decoration: none; color: #30343B; padding: 8px 0; border-bottom: 2px solid transparent;">Archive</a></li>
-        <li><a href="/about.html" style="text-decoration: none; color: #C96F17; padding: 8px 0; border-bottom: 2px solid #F28C28;">About</a></li>
-        <li><a href="/contributors.html" style="text-decoration: none; color: #30343B; padding: 8px 0; border-bottom: 2px solid transparent;">Contributors</a></li>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list"><span>Menu</span></button>
+      <ul class="site-nav__list" id="primary-nav-list">
+        <li><a class="nav-link" href="/index.html">Home</a></li>
+        <li><a class="nav-link" href="/archive.html">Archive</a></li>
+        <li><a class="nav-link" href="/about.html" aria-current="page">About</a></li>
+        <li><a class="nav-link" href="/contributors.html">Contributors</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main" style="max-width: 1152px; margin-inline: auto; padding-inline: 24px;">
-
-  <!-- HEADER -->
-  <section style="padding-block: 64px 32px; max-width: 700px;">
-    <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; color: #1B6A68; display: inline-block; margin-bottom: 16px;">About this journal</span>
-    <h1 style="margin-bottom: 24px;">A journal that admits the codebase has ghosts</h1>
-    <p style="font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #66717E; margin: 0;">The Haunted Bicycle is the engineering journal of <strong>Skill Weaver</strong>, an adaptive assessment project. We write about the architecture decisions we made, the ones we regret, the debugging stories worth retelling, and the research behind adaptive testing — in public, as we go.</p>
+<main id="main" class="page-compact">
+  <section class="wrap wrap--prose section--tight">
+    <p class="hero__eyebrow">About this journal</p>
+    <h1>A journal that admits the codebase has ghosts</h1>
+    <p class="hero__lede">The Haunted Bicycle is the engineering journal of <strong>Skill Weaver</strong>, an adaptive assessment project. We write about the architecture decisions we made, the ones we regret, the debugging stories worth retelling, and the research behind adaptive testing &mdash; in public, as we go.</p>
   </section>
 
-  <!-- THE CAST -->
-  <section style="padding-block: 32px;">
-    <h2 style="margin-bottom: 40px;">The cast</h2>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
-      <div style="background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-        <img src="/assets/svg/character-monster.svg" alt="Vampire, standing in for the frontend" style="width: 96px; height: 96px; border-radius: 3px; background: #EEEAE1;">
-        <h3 style="margin: 0;">Vampire</h3>
-        <p style="color: #66717E; margin: 0; font-size: 16px;">The face of the bicycle. The Vampire paints the buttons you tap, the pages you scroll, and the quiet polish that makes a haunted system feel rideable — then owns every glitch users see first.</p>
+  <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
+
+  <section class="wrap section--tight">
+    <h2 style="margin-bottom: var(--space-md);">The cast</h2>
+    <!-- Icons: temporary until Bryce's caricatures land -->
+    <div class="grid grid--cards">
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-monster.svg" alt="Vampire, standing in for the frontend" style="width:96px;height:96px;">
+        <h3 class="card__title">Vampire</h3>
+        <p class="card__excerpt">The face of the bicycle. The Vampire paints the buttons you tap, the pages you scroll, and the quiet polish that makes a haunted system feel rideable &mdash; then owns every glitch users see first.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-        <img src="/assets/svg/character-bicycle.svg" alt="Ghost, standing in for the backend" style="width: 96px; height: 96px; border-radius: 3px; background: #EEEAE1;">
-        <h3 style="margin: 0;">Ghost</h3>
-        <p style="color: #66717E; margin: 0; font-size: 16px;">The frame you never see while you're pedaling. APIs, data, deploy pipelines — the load-bearing metal that squeaks under pressure and somehow still gets you home.</p>
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="Ghost, standing in for the backend" style="width:96px;height:96px;">
+        <h3 class="card__title">Ghost</h3>
+        <p class="card__excerpt">The frame you never see while you're pedaling. APIs, data, deploy pipelines &mdash; the load-bearing metal that squeaks under pressure and somehow still gets you home.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
-        <img src="/assets/svg/character-spider.svg" alt="Spider, the algorithm" style="width: 96px; height: 96px; border-radius: 3px; background: #EEEAE1;">
-        <h3 style="margin: 0;">Spider</h3>
-        <p style="color: #66717E; margin: 0; font-size: 16px;">Patient, precise, and indifferent to your intentions. Spider spins the adaptive logic that actually decides what happens, thread by thread, long after the commit message is forgotten.</p>
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-spider.svg" alt="Spider, the algorithm" style="width:96px;height:96px;">
+        <h3 class="card__title">Spider</h3>
+        <p class="card__excerpt">Patient, precise, and indifferent to your intentions. Spider spins the adaptive logic that actually decides what happens, thread by thread, long after the commit message is forgotten.</p>
       </div>
     </div>
   </section>
 
-  <div style="width: 100%; height: 32px; margin-block: 16px; overflow: hidden;">
-    <img src="/assets/svg/thread-divider.svg" alt="" role="presentation" style="width: 100%; height: 100%;">
-  </div>
+  <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
 
-  <!-- EXTENDED TEXT -->
-  <section style="padding-block: 16px; max-width: none;">
-    <p style="max-width: none; margin: 0;">Most engineering blogs read like press releases: clean narratives where every decision was obviously correct in hindsight. Ours doesn't work that way, because software doesn't work that way. Every system we've built long enough has developed a personality — parts that groan under load, parts nobody remembers writing, parts that only work if you don't look at them directly. We started calling that personality a haunting, and the name stuck.</p>
+  <section class="wrap wrap--prose section--tight">
+    <p>Most engineering blogs read like press releases: clean narratives where every decision was obviously correct in hindsight. Ours doesn't work that way, because software doesn't work that way. Every system we've built long enough has developed a personality &mdash; parts that groan under load, parts nobody remembers writing, parts that only work if you don't look at them directly. We started calling that personality a haunting, and the name stuck.</p>
   </section>
 
-  <div style="width: 100%; height: 32px; margin-block: 16px; overflow: hidden;">
-    <img src="/assets/svg/thread-divider.svg" alt="" role="presentation" style="width: 100%; height: 100%;">
-  </div>
+  <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
 
-  <!-- CONTENT & ROADMAP -->
-  <section style="padding-block: 16px; max-width: 700px;">
-    <h2 style="margin-bottom: 24px;">What we cover</h2>
-    <ul style="margin-bottom: 48px;">
-      <li><strong>Architecture</strong> — decisions we made about how Skill Weaver is put together, and the tradeoffs behind them.</li>
-      <li><strong>Database</strong> — schemas, queries, and the data shapes that quietly steer the product.</li>
-      <li><strong>Adaptive assessment</strong> — the research behind item response theory, adaptive testing, and preserving instructor agency in assessment design.</li>
-      <li><strong>Deployment</strong> — the unglamorous, load-bearing work of keeping the thing running.</li>
-      <li><strong>Craft</strong> — reflections on how we work, not just what we shipped.</li>
-      <li><strong>Pedagogy</strong> — teaching, learning design, and how assessment should serve instructors.</li>
-      <li><strong>Design</strong> — visual language, interaction choices, and the art that carries the story.</li>
+  <section class="wrap wrap--prose section--tight">
+    <h2>What we cover</h2>
+    <ul>
+      <li><strong>Architecture</strong> &mdash; decisions we made about how Skill Weaver is put together, and the tradeoffs behind them.</li>
+      <li><strong>Database</strong> &mdash; schemas, queries, and the data shapes that quietly steer the product.</li>
+      <li><strong>Adaptive assessment</strong> &mdash; the research behind item response theory, adaptive testing, and preserving instructor agency in assessment design.</li>
+      <li><strong>Deployment</strong> &mdash; the unglamorous, load-bearing work of keeping the thing running.</li>
+      <li><strong>Craft</strong> &mdash; reflections on how we work, not just what we shipped.</li>
+      <li><strong>Pedagogy</strong> &mdash; teaching, learning design, and how assessment should serve instructors.</li>
+      <li><strong>Design</strong> &mdash; visual language, interaction choices, and the art that carries the story.</li>
     </ul>
 
-    <h2 style="margin-bottom: 24px;">Who's behind it</h2>
-    <p style="margin-bottom: 0;">Four of us show up here — three writers and Bryce on illustration. See the full <a href="/contributors.html">contributors page</a> for who covers what.</p>
+    <h2>Who's behind it</h2>
+    <p>Four of us show up here &mdash; three writers and Bryce on illustration. See the full <a href="/contributors.html">contributors page</a> for who covers what.</p>
   </section>
-
 </main>
 
-<footer style="background: #22252A; color: #F7F5F1; margin-top: 64px;">
-  <div style="max-width: 1152px; margin-inline: auto; padding-block: 64px; padding-inline: 24px; display: grid; gap: 40px; grid-template-columns: 1.4fr 1fr 1fr;">
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
     <div>
-      <a href="/index.html" style="color: #F7F5F1; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 12px; text-decoration: none;">
-        <img src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
-        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px;">The Haunted Bicycle</span>
+      <a class="brand" href="/index.html" style="color:var(--color-paper); margin-bottom: var(--space-sm); display:inline-flex;">
+        <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
+        <span class="brand__title">The Haunted Bicycle</span>
       </a>
-      <p style="color: #9AA3AD; font-size: 14px; max-width: 32ch; margin: 16px 0 0;">The engineering journal of the Skill Weaver project. Architecture decisions, debugging stories, and adaptive assessment research, told through Monster, Spider, and Bicycle.</p>
+      <p class="site-footer__note">The engineering journal of the Skill Weaver project.</p>
     </div>
     <div>
-      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA3AD; margin: 0 0 12px;">Read</p>
-      <ul style="list-style: none; padding: 0; display: grid; gap: 8px; font-size: 14px; margin: 0;">
-        <li><a href="/archive.html" style="color: #F7F5F1; text-decoration: none;">Archive</a></li>
-        <li><a href="/index.html#latest" style="color: #F7F5F1; text-decoration: none;">Latest posts</a></li>
+      <p class="site-footer__heading">Read</p>
+      <ul class="site-footer__list">
+        <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/index.html#latest">Latest posts</a></li>
       </ul>
     </div>
     <div>
-      <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: #9AA3AD; margin: 0 0 12px;">Project</p>
-      <ul style="list-style: none; padding: 0; display: grid; gap: 8px; font-size: 14px; margin: 0;">
-        <li><a href="/about.html" style="color: #F7F5F1; text-decoration: none;">About</a></li>
-        <li><a href="/contributors.html" style="color: #F7F5F1; text-decoration: none;">Contributors</a></li>
+      <p class="site-footer__heading">Project</p>
+      <ul class="site-footer__list">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contributors.html">Contributors</a></li>
       </ul>
     </div>
   </div>
-  <div style="max-width: 1152px; margin-inline: auto; padding-inline: 24px; border-top: 1px solid rgba(247,245,241,0.12); padding-block: 16px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #9AA3AD; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+  <div class="wrap site-footer__bottom">
     <span>&copy; <span id="year">2026</span> Manju, Jesus &amp; Bricen. Images and art by Bryce Hemmie.</span>
     <span>Hosted on GitHub Pages.</span>
   </div>
 </footer>
-
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="/assets/js/main.js"></script>
 </body>
 </html>
