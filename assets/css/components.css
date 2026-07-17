@@ -139,6 +139,18 @@
   text-align: left;
 }
 
+/* About (and any page): all body text spans the wrap width */
+.page-fullwidth .wrap--prose,
+.page-fullwidth p,
+.page-fullwidth .hero__lede,
+.page-fullwidth .card__excerpt,
+.page-fullwidth ul,
+.page-fullwidth li {
+  max-width: none;
+  width: 100%;
+  text-align: left;
+}
+
 /* ---- Buttons ---- */
 
 .button {
