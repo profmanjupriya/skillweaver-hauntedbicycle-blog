@@ -6,10 +6,10 @@
 
 .hero {
   padding-block: var(--space-2xl) var(--space-xl);
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: var(--space-xl);
-  align-items: center;
 }
 
 .hero__eyebrow {
@@ -32,11 +32,16 @@
   display: inline-block;
 }
 
-.hero h1 { margin-bottom: var(--space-md); }
+.hero h1 {
+  margin-bottom: var(--space-md);
+  max-width: none;
+}
 
 .hero__copy {
+  display: block;
   width: 100%;
   max-width: none;
+  box-sizing: border-box;
 }
 
 .hero__lede {
@@ -46,17 +51,22 @@
   margin-bottom: var(--space-lg);
 }
 
-.hero__copy .hero__lede {
-  max-width: none;
+.hero__copy .hero__lede,
+.hero__copy p {
+  max-width: none !important;
   width: 100%;
 }
 
 .hero__art {
-  order: -1;
+  width: 100%;
   max-width: 520px;
   margin-inline: auto;
-  width: 100%;
   animation: float-in var(--duration-slow) var(--ease-out) both;
+}
+
+.hero__art img {
+  width: 100%;
+  height: auto;
 }
 
 @keyframes float-in {
