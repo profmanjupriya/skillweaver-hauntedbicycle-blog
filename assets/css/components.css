@@ -129,6 +129,16 @@
   padding-block: var(--space-2xs);
 }
 
+/* Full-width, left-stacked page intros (not prose-narrow / centered) */
+.page-intro,
+.page-intro h1,
+.page-intro .hero__lede,
+.page-intro p {
+  max-width: none;
+  width: 100%;
+  text-align: left;
+}
+
 /* ---- Buttons ---- */
 
 .button {
