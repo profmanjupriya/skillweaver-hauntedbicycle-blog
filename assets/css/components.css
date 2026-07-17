@@ -33,11 +33,22 @@
 }
 
 .hero h1 { margin-bottom: var(--space-md); }
+
+.hero__copy {
+  width: 100%;
+  max-width: none;
+}
+
 .hero__lede {
   font-size: var(--step-1);
   color: var(--color-slate);
   max-width: 46ch;
   margin-bottom: var(--space-lg);
+}
+
+.hero__copy .hero__lede {
+  max-width: none;
+  width: 100%;
 }
 
 .hero__art {
@@ -56,6 +67,33 @@
 @media (max-width: 768px) {
   .hero { padding-block: var(--space-xl); }
   .hero__art { max-width: 260px; }
+}
+
+/* Homepage: minimal vertical spacing through early sections */
+.home .hero {
+  padding-block: var(--space-sm) var(--space-2xs);
+  gap: var(--space-sm);
+}
+
+.home .hero__lede,
+.home .hero__copy .hero__lede {
+  margin-bottom: var(--space-sm);
+}
+
+.home .hero + .wrap .thread-divider {
+  margin-block: var(--space-2xs);
+}
+
+.home .section--tight {
+  padding-block: var(--space-sm);
+}
+
+.home .section__head {
+  margin-bottom: var(--space-sm);
+}
+
+.home #latest {
+  padding-block-start: var(--space-2xs);
 }
 
 /* ---- Buttons ---- */
@@ -114,29 +152,21 @@
 
 .pill-row { display: flex; flex-wrap: wrap; gap: var(--space-2xs); }
 
+/* Archive filters use <button class="pill"> — match span.pill appearance */
 button.pill {
+  appearance: none;
+  -webkit-appearance: none;
   background: transparent;
   cursor: pointer;
-  font: inherit;
-}
-
-button.pill[aria-pressed="true"] {
-  background: currentColor;
-  color: var(--color-paper);
-  border-color: transparent;
-}
-
-button.pill[aria-pressed="true"].pill--architecture,
-button.pill[aria-pressed="true"].pill--debugging,
-button.pill[aria-pressed="true"].pill--assessment,
-button.pill[aria-pressed="true"].pill--deployment,
-button.pill[aria-pressed="true"].pill--craft,
-button.pill[aria-pressed="true"].pill--database,
-button.pill[aria-pressed="true"].pill--pedagogy,
-button.pill[aria-pressed="true"].pill--design {
-  color: var(--color-paper);
-  background: var(--color-charcoal);
-  border-color: var(--color-charcoal);
+  min-height: 0;
+  margin: 0;
+  line-height: 1.2;
+  color: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: inherit;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .is-hidden { display: none !important; }
@@ -243,6 +273,17 @@ figcaption {
   border: var(--border-thin);
   border-radius: var(--radius-md);
   background: var(--color-bg-raised);
+}
+
+.contributor-card--stacked {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contributor-card--stacked .contributor-card__avatar {
+  width: 80px;
+  height: 80px;
 }
 
 .contributor-card__avatar {
