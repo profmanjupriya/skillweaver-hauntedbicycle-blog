@@ -100,9 +100,96 @@
     });
   }
 
+  /* ---- Archive category filter + pagination ---- */
+  function initArchiveFilter() {
+    var root = document.querySelector("[data-archive]");
+    if (!root) return;
+
+    var PAGE_SIZE = 6;
+    var buttons = root.querySelectorAll("[data-filter]");
+    var cards = Array.prototype.slice.call(
+      root.querySelectorAll("[data-archive-grid] .card[data-category]")
+    );
+    var countEl = root.querySelector("[data-archive-count]");
+    var pagesEl = root.querySelector("[data-archive-pages]");
+    var emptyEl = root.querySelector("[data-archive-empty]");
+    var activeFilter = "all";
+    var currentPage = 1;
+
+    function matchingCards() {
+      if (activeFilter === "all") return cards;
+      return cards.filter(function (card) {
+        return card.getAttribute("data-category") === activeFilter;
+      });
+    }
+
+    function render() {
+      var matches = matchingCards();
+      var totalPages = Math.max(1, Math.ceil(matches.length / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = totalPages;
+
+      cards.forEach(function (card) {
+        card.classList.add("is-hidden");
+      });
+
+      var start = (currentPage - 1) * PAGE_SIZE;
+      var visible = matches.slice(start, start + PAGE_SIZE);
+      visible.forEach(function (card) {
+        card.classList.remove("is-hidden");
+      });
+
+      if (countEl) {
+        var n = matches.length;
+        countEl.textContent = n + (n === 1 ? " post" : " posts");
+      }
+
+      if (emptyEl) {
+        if (matches.length === 0) emptyEl.classList.remove("is-hidden");
+        else emptyEl.classList.add("is-hidden");
+      }
+
+      if (pagesEl) {
+        pagesEl.innerHTML = "";
+        for (var i = 1; i <= totalPages; i++) {
+          var li = document.createElement("li");
+          var a = document.createElement("a");
+          a.href = "#";
+          a.textContent = String(i);
+          if (i === currentPage) a.setAttribute("aria-current", "page");
+          a.addEventListener("click", function (page) {
+            return function (e) {
+              e.preventDefault();
+              currentPage = page;
+              render();
+            };
+          }(i));
+          li.appendChild(a);
+          pagesEl.appendChild(li);
+        }
+      }
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        activeFilter = btn.getAttribute("data-filter") || "all";
+        currentPage = 1;
+        buttons.forEach(function (b) {
+          b.setAttribute(
+            "aria-pressed",
+            String(b === btn)
+          );
+        });
+        render();
+      });
+    });
+
+    render();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
     initReadingProgress();
     initReveal();
+    initArchiveFilter();
   });
 })();

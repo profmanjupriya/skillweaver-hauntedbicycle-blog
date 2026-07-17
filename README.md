@@ -51,7 +51,7 @@ There's no include mechanism, so:
 
 1. `cp layouts/post-template.html posts/your-slug.html`
 2. Work through the numbered HTML comments in the template — they cover title, meta tags, category pill, hero image, table of contents, body, prev/next nav, and related posts.
-3. Category must be one of: **Architecture, Debugging, Adaptive Assessment, Deployment, Craft** — these map to the `.pill--*` classes in `components.css` and the filters on `archive.html`.
+3. Category must be one of: **Architecture, Database, Adaptive Assessment, Deployment, Craft, Pedagogy, Design** — these map to the `.pill--*` classes in `components.css` and the filters on `archive.html`.
 4. Add the post to `archive.html`, the homepage grid, `sitemap.xml`, and `rss.xml`.
 5. Open a PR using the template in `.github/PULL_REQUEST_TEMPLATE.md`. One review required before merging (see Contributor workflow below).
 
@@ -81,6 +81,7 @@ Semantic HTML5 landmarks, a skip link on every page, visible focus states (`:foc
 - **Manju** — pedagogy, adaptive assessment, AI
 - **Jesus** — DevOps, Linux, Docker, deployment
 - **Bricen** — frontend, debugging, implementation
+- **Bryce Hemmie** — illustration, visual identity (images and art)
 
 Feature branches, pull requests, one review required before merging, conventional commit messages (`feat:`, `fix:`, `docs:`, `post:`). Issue templates for bug reports and new post proposals live in `.github/ISSUE_TEMPLATE/`.
 

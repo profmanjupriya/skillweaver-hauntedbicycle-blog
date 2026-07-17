@@ -7,7 +7,7 @@
 .hero {
   padding-block: var(--space-2xl) var(--space-xl);
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: var(--space-xl);
   align-items: center;
 }
@@ -41,6 +41,10 @@
 }
 
 .hero__art {
+  order: -1;
+  max-width: 520px;
+  margin-inline: auto;
+  width: 100%;
   animation: float-in var(--duration-slow) var(--ease-out) both;
 }
 
@@ -50,8 +54,8 @@
 }
 
 @media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; padding-block: var(--space-xl); }
-  .hero__art { order: -1; max-width: 260px; margin-inline: auto; }
+  .hero { padding-block: var(--space-xl); }
+  .hero__art { max-width: 260px; }
 }
 
 /* ---- Buttons ---- */
@@ -104,8 +108,38 @@
 .pill--assessment   { color: #7A5AA8; }
 .pill--deployment   { color: #3D7A3E; }
 .pill--craft        { color: var(--color-slate); }
+.pill--database     { color: #2F6B8A; }
+.pill--pedagogy     { color: #A05A3C; }
+.pill--design       { color: #8A4F7A; }
 
 .pill-row { display: flex; flex-wrap: wrap; gap: var(--space-2xs); }
+
+button.pill {
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+button.pill[aria-pressed="true"] {
+  background: currentColor;
+  color: var(--color-paper);
+  border-color: transparent;
+}
+
+button.pill[aria-pressed="true"].pill--architecture,
+button.pill[aria-pressed="true"].pill--debugging,
+button.pill[aria-pressed="true"].pill--assessment,
+button.pill[aria-pressed="true"].pill--deployment,
+button.pill[aria-pressed="true"].pill--craft,
+button.pill[aria-pressed="true"].pill--database,
+button.pill[aria-pressed="true"].pill--pedagogy,
+button.pill[aria-pressed="true"].pill--design {
+  color: var(--color-paper);
+  background: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+}
+
+.is-hidden { display: none !important; }
 
 /* ---- Article cards ---- */
 

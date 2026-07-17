@@ -27,7 +27,6 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="/index.html">
-      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
       <span class="brand__text">
         <span class="brand__title">The Haunted Bicycle</span>
         <span class="brand__eyebrow">Skill Weaver engineering journal</span>
@@ -49,34 +48,37 @@
   <section class="wrap section--tight">
     <p class="hero__eyebrow">Everything we've written</p>
     <h1>Archive</h1>
-    <p class="hero__lede">In reverse chronological order. Filtering by category and tag search are on the roadmap &mdash; see <a href="/about.html">About</a>.</p>
+    <p class="hero__lede">In reverse chronological order. Click a category to filter posts.</p>
   </section>
 
-  <section class="wrap section--tight">
+  <section class="wrap section--tight" data-archive>
     <div class="pill-row" style="margin-bottom: var(--space-lg);" role="group" aria-label="Filter by category">
-      <span class="pill pill--architecture">Architecture</span>
-      <span class="pill pill--debugging">Debugging</span>
-      <span class="pill pill--assessment">Adaptive Assessment</span>
-      <span class="pill pill--deployment">Deployment</span>
-      <span class="pill pill--craft">Craft</span>
+      <button type="button" class="pill" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="pill pill--architecture" data-filter="architecture" aria-pressed="false">Architecture</button>
+      <button type="button" class="pill pill--database" data-filter="database" aria-pressed="false">Database</button>
+      <button type="button" class="pill pill--assessment" data-filter="assessment" aria-pressed="false">Adaptive Assessment</button>
+      <button type="button" class="pill pill--deployment" data-filter="deployment" aria-pressed="false">Deployment</button>
+      <button type="button" class="pill pill--craft" data-filter="craft" aria-pressed="false">Craft</button>
+      <button type="button" class="pill pill--pedagogy" data-filter="pedagogy" aria-pressed="false">Pedagogy</button>
+      <button type="button" class="pill pill--design" data-filter="design" aria-pressed="false">Design</button>
     </div>
 
-    <div class="grid grid--cards">
-      <a class="card" href="/posts/pulling-one-thread-in-someone-elses-codebase.html">
+    <div class="grid grid--cards" data-archive-grid>
+      <a class="card" href="/posts/pulling-one-thread-in-someone-elses-codebase.html" data-category="debugging">
         <img class="card__art" src="/assets/svg/character-monster.svg" alt="" style="width:56px;height:56px;">
         <div class="pill-row"><span class="pill pill--debugging">Debugging</span></div>
         <h2 class="card__title">Pulling One Thread in Someone Else's Codebase</h2>
         <p class="card__excerpt">What a scoring bug taught us about reading code we didn't write, calmly.</p>
         <p class="card__meta"><span>Bricen</span><span>&middot;</span><span>Feb 3, 2026</span><span>&middot;</span><span>9 min</span></p>
       </a>
-      <a class="card" href="/posts/three-nginx-files-enter-a-server.html">
+      <a class="card" href="/posts/three-nginx-files-enter-a-server.html" data-category="deployment">
         <img class="card__art" src="/assets/svg/character-spider.svg" alt="" style="width:56px;height:56px;">
         <div class="pill-row"><span class="pill pill--deployment">Deployment</span></div>
         <h2 class="card__title">Three Nginx Files Enter a Server</h2>
         <p class="card__excerpt">A deployment postmortem in three configuration files, one of which was lying to us.</p>
         <p class="card__meta"><span>Jesus</span><span>&middot;</span><span>Jan 20, 2026</span><span>&middot;</span><span>8 min</span></p>
       </a>
-      <a class="card" href="/posts/why-the-bicycle-is-haunted.html">
+      <a class="card" href="/posts/why-the-bicycle-is-haunted.html" data-category="craft">
         <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="" style="width:56px;height:56px;">
         <div class="pill-row"><span class="pill pill--craft">Craft</span></div>
         <h2 class="card__title">Why the Bicycle Is Haunted</h2>
@@ -85,9 +87,11 @@
       </a>
     </div>
 
-    <nav class="pagination" aria-label="Archive pages">
-      <span>3 posts</span>
-      <ul class="pagination__pages">
+    <p class="is-hidden" data-archive-empty style="color: var(--color-slate); margin-top: var(--space-lg);">No posts in this category yet.</p>
+
+    <nav class="pagination" aria-label="Archive pages" data-archive-pagination>
+      <span data-archive-count>3 posts</span>
+      <ul class="pagination__pages" data-archive-pages>
         <li><a href="/archive.html" aria-current="page">1</a></li>
       </ul>
       <span></span>
@@ -108,7 +112,7 @@
       <p class="site-footer__heading">Read</p>
       <ul class="site-footer__list">
         <li><a href="/archive.html">Archive</a></li>
-        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/index.html#latest">Latest posts</a></li>
         <li><a href="/rss.xml">RSS feed</a></li>
       </ul>
     </div>
@@ -117,12 +121,11 @@
       <ul class="site-footer__list">
         <li><a href="/about.html">About</a></li>
         <li><a href="/contributors.html">Contributors</a></li>
-        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
-    <span>&copy; <span id="year">2026</span> The Skill Weaver Project.</span>
+    <span>&copy; <span id="year">2026</span> Manju, Jesus &amp; Bricen. Images and art by Bryce Hemmie.</span>
     <span>Hosted on GitHub Pages.</span>
   </div>
 </footer>

@@ -26,7 +26,6 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="/index.html">
-      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
       <span class="brand__text">
         <span class="brand__title">The Haunted Bicycle</span>
         <span class="brand__eyebrow">Skill Weaver engineering journal</span>
@@ -58,25 +57,26 @@
     </div>
 
     <h2>The cast</h2>
-    <p>Three recurring characters carry the stories, each standing in for a role every project needs:</p>
+    <p>Three recurring characters carry the stories &mdash; frontend, backend, and the spider that binds them:</p>
   </section>
 
   <section class="wrap section--tight">
+    <!-- Icons: temporary placeholders until Bryce's caricatures land -->
     <div class="grid grid--cards">
       <div class="card">
-        <img class="card__art" src="/assets/svg/character-monster.svg" alt="Monster, a round friendly creature with mismatched horns" style="width:96px;height:96px;">
-        <h3 class="card__title">Monster &mdash; the developer</h3>
-        <p class="card__excerpt">Well-meaning, occasionally the source of the haunting. Monster writes the code, reads the stack trace, and owns the consequences either way.</p>
+        <img class="card__art" src="/assets/svg/character-monster.svg" alt="Monster, standing in for the frontend" style="width:96px;height:96px;">
+        <h3 class="card__title">Monster &mdash; the frontend</h3>
+        <p class="card__excerpt">The face of the bicycle. Monster paints the buttons you tap, the pages you scroll, and the quiet polish that makes a haunted system feel rideable &mdash; then owns every glitch users see first.</p>
       </div>
       <div class="card">
-        <img class="card__art" src="/assets/svg/character-spider.svg" alt="Spider, sitting at the center of a web" style="width:96px;height:96px;">
+        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="Bicycle, standing in for the backend" style="width:96px;height:96px;">
+        <h3 class="card__title">Bicycle &mdash; the backend</h3>
+        <p class="card__excerpt">The frame you never see while you're pedaling. APIs, data, deploy pipelines &mdash; the load-bearing metal that squeaks under pressure and somehow still gets you home.</p>
+      </div>
+      <div class="card">
+        <img class="card__art" src="/assets/svg/character-spider.svg" alt="Spider, the algorithm" style="width:96px;height:96px;">
         <h3 class="card__title">Spider &mdash; the algorithm</h3>
-        <p class="card__excerpt">Patient, precise, and indifferent to your intentions. Spider spins the logic that actually decides what happens, thread by thread.</p>
-      </div>
-      <div class="card">
-        <img class="card__art" src="/assets/svg/character-bicycle.svg" alt="Bicycle, a two-wheeled system with mismatched wheels" style="width:96px;height:96px;">
-        <h3 class="card__title">Bicycle &mdash; the software system</h3>
-        <p class="card__excerpt">The thing you're actually riding. Built to move fast, prone to squeaks nobody can locate, held together by decisions made under deadline.</p>
+        <p class="card__excerpt">Patient, precise, and indifferent to your intentions. Spider spins the adaptive logic that actually decides what happens, thread by thread, long after the commit message is forgotten.</p>
       </div>
     </div>
   </section>
@@ -87,14 +87,16 @@
     <h2>What we cover</h2>
     <ul>
       <li><strong>Architecture</strong> &mdash; decisions we made about how Skill Weaver is put together, and the tradeoffs behind them.</li>
-      <li><strong>Debugging</strong> &mdash; postmortems and stories from chasing down bugs, written while the details are still fresh.</li>
+      <li><strong>Database</strong> &mdash; schemas, queries, and the data shapes that quietly steer the product.</li>
       <li><strong>Adaptive assessment</strong> &mdash; the research behind item response theory, adaptive testing, and preserving instructor agency in assessment design.</li>
       <li><strong>Deployment</strong> &mdash; the unglamorous, load-bearing work of keeping the thing running.</li>
       <li><strong>Craft</strong> &mdash; reflections on how we work, not just what we shipped.</li>
+      <li><strong>Pedagogy</strong> &mdash; teaching, learning design, and how assessment should serve instructors.</li>
+      <li><strong>Design</strong> &mdash; visual language, interaction choices, and the art that carries the story.</li>
     </ul>
 
     <h2>Who's behind it</h2>
-    <p>Three of us write here regularly &mdash; see the full <a href="/contributors.html">contributors page</a> for who covers what.</p>
+    <p>Four of us show up here &mdash; three writers and Bryce on illustration. See the full <a href="/contributors.html">contributors page</a> for who covers what.</p>
 
     <h2>What's next</h2>
     <p>Full-text search, a tags index, syntax highlighting themes, series pages, and eventually transcripts from conference talks and a podcast. Roadmap details live in the repository README.</p>
@@ -114,7 +116,7 @@
       <p class="site-footer__heading">Read</p>
       <ul class="site-footer__list">
         <li><a href="/archive.html">Archive</a></li>
-        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/index.html#latest">Latest posts</a></li>
         <li><a href="/rss.xml">RSS feed</a></li>
       </ul>
     </div>
@@ -123,12 +125,11 @@
       <ul class="site-footer__list">
         <li><a href="/about.html">About</a></li>
         <li><a href="/contributors.html">Contributors</a></li>
-        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
-    <span>&copy; <span id="year">2026</span> The Skill Weaver Project.</span>
+    <span>&copy; <span id="year">2026</span> Manju, Jesus &amp; Bricen. Images and art by Bryce Hemmie.</span>
     <span>Hosted on GitHub Pages.</span>
   </div>
 </footer>

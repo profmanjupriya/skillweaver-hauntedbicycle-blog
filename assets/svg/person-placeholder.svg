@@ -1,0 +1,6 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="personTitle">
+  <title id="personTitle">Person placeholder</title>
+  <circle cx="32" cy="32" r="31" fill="#EEEBE4" stroke="#66717E" stroke-width="1.5"/>
+  <circle cx="32" cy="24" r="10" fill="#66717E"/>
+  <path d="M14 52c3.5-10 12-15 18-15s14.5 5 18 15" fill="#66717E"/>
+</svg>

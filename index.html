@@ -48,7 +48,6 @@
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="/index.html">
-      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
       <span class="brand__text">
         <span class="brand__title">The Haunted Bicycle</span>
         <span class="brand__eyebrow">Skill Weaver engineering journal</span>
@@ -70,7 +69,7 @@
 
 <main id="main">
 
-  <!-- HERO -->
+  <!-- HERO: banner on top, text below -->
   <section class="wrap hero">
     <div>
       <p class="hero__eyebrow">Field notes from the Skill Weaver project</p>
@@ -153,45 +152,38 @@
     </div>
     <div class="grid grid--cards">
       <div class="contributor-card">
-        <img class="contributor-card__avatar" src="/assets/svg/character-spider.svg" alt="" width="64" height="64">
+        <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
         <div>
           <p class="contributor-card__role">Pedagogy &middot; Adaptive Assessment &middot; AI</p>
           <h3 class="card__title" style="font-size: var(--step-0);">Manju</h3>
         </div>
       </div>
       <div class="contributor-card">
-        <img class="contributor-card__avatar" src="/assets/svg/character-bicycle.svg" alt="" width="64" height="64">
+        <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
         <div>
           <p class="contributor-card__role">DevOps &middot; Linux &middot; Docker &middot; Deployment</p>
           <h3 class="card__title" style="font-size: var(--step-0);">Jesus</h3>
         </div>
       </div>
       <div class="contributor-card">
-        <img class="contributor-card__avatar" src="/assets/svg/character-monster.svg" alt="" width="64" height="64">
+        <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
         <div>
           <p class="contributor-card__role">Frontend &middot; Debugging &middot; Implementation</p>
           <h3 class="card__title" style="font-size: var(--step-0);">Bricen</h3>
         </div>
       </div>
+      <div class="contributor-card">
+        <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
+        <div>
+          <p class="contributor-card__role">Illustration &middot; Visual identity</p>
+          <h3 class="card__title" style="font-size: var(--step-0);">Bryce</h3>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ARCHIVE PREVIEW / CATEGORIES -->
-  <section class="section section--tight wrap" id="categories">
-    <div class="section__head">
-      <h2>Categories</h2>
-    </div>
-    <div class="pill-row">
-      <a class="pill pill--architecture" href="/archive.html">Architecture</a>
-      <a class="pill pill--debugging" href="/archive.html">Debugging</a>
-      <a class="pill pill--assessment" href="/archive.html">Adaptive Assessment</a>
-      <a class="pill pill--deployment" href="/archive.html">Deployment</a>
-      <a class="pill pill--craft" href="/archive.html">Craft</a>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER PLACEHOLDER -->
-  <section class="wrap section--tight">
+  <!-- NEWSLETTER PLACEHOLDER — hidden until wired to a provider; do not remove -->
+  <section class="wrap section--tight is-hidden" aria-hidden="true">
     <div class="newsletter">
       <div>
         <h3 style="font-size: var(--step-0);">Get new posts by email</h3>
@@ -220,7 +212,7 @@
       <p class="site-footer__heading">Read</p>
       <ul class="site-footer__list">
         <li><a href="/archive.html">Archive</a></li>
-        <li><a href="/index.html#categories">Categories</a></li>
+        <li><a href="/index.html#latest">Latest posts</a></li>
         <li><a href="/rss.xml">RSS feed</a></li>
       </ul>
     </div>
@@ -229,12 +221,11 @@
       <ul class="site-footer__list">
         <li><a href="/about.html">About</a></li>
         <li><a href="/contributors.html">Contributors</a></li>
-        <li><a href="https://github.com/skill-weaver/haunted-bicycle">Source on GitHub</a></li>
       </ul>
     </div>
   </div>
   <div class="wrap site-footer__bottom">
-    <span>&copy; <span id="year">2026</span> The Skill Weaver Project. Built with plain HTML, CSS, and JS.</span>
+    <span>&copy; <span id="year">2026</span> Manju, Jesus &amp; Bricen. Images and art by Bryce Hemmie.</span>
     <span>Hosted on GitHub Pages.</span>
   </div>
 </footer>

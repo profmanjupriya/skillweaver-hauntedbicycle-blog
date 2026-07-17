@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+  BLANK POST STARTER
+  ------------------
+  Copy this file to posts/your-slug.html, then replace every PLACEHOLDER
+  below (search for POST TITLE, POST-SLUG, AUTHOR NAME, CATEGORY, etc.).
+  When done, also add the post to archive.html, index.html (Latest posts),
+  sitemap.xml, and rss.xml — see README §"Adding a post".
+-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 1. Update title, using "Post Title — The Haunted Bicycle" -->
+  <!-- 1. Title format: "Post Title — The Haunted Bicycle" -->
   <title>POST TITLE — The Haunted Bicycle</title>
 
-  <!-- 2. Update meta description (150-160 chars, used for SEO and cards) -->
+  <!-- 2. Meta description (150–160 chars) -->
   <meta name="description" content="ONE SENTENCE SUMMARY">
 
-  <!-- 3. Update canonical + og:url to the real filename -->
+  <!-- 3. Canonical + og:url must match the real filename -->
   <link rel="canonical" href="https://hauntedbicycle.dev/posts/POST-SLUG.html">
   <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
 
@@ -20,7 +28,7 @@
   <meta property="og:url" content="https://hauntedbicycle.dev/posts/POST-SLUG.html">
   <meta property="article:author" content="AUTHOR NAME">
   <meta property="article:published_time" content="YYYY-MM-DD">
-  <!-- 4. Category must be one of: Architecture | Debugging | Adaptive Assessment | Deployment | Craft -->
+  <!-- 4. Category: Architecture | Database | Adaptive Assessment | Deployment | Craft | Pedagogy | Design -->
   <meta property="article:section" content="CATEGORY">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -46,13 +54,11 @@
 </head>
 <body>
 
-<!-- Paste components/header.html here, set aria-current="page" on nothing
-     (posts aren't in primary nav) -->
+<!-- Header: keep in sync with components/header.html (posts are not in primary nav) -->
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="brand" href="/index.html">
-      <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="34" height="34">
       <span class="brand__text">
         <span class="brand__title">The Haunted Bicycle</span>
         <span class="brand__eyebrow">Skill Weaver engineering journal</span>
@@ -73,14 +79,14 @@
 <main id="main">
   <article data-reading-progress>
     <header class="post-header wrap">
-      <!-- 5. Pill class options: pill--architecture, pill--debugging, pill--assessment, pill--deployment, pill--craft -->
+      <!-- 5. Pill classes: pill--architecture | pill--database | pill--assessment | pill--deployment | pill--craft | pill--pedagogy | pill--design -->
       <div class="pill-row"><span class="pill pill--craft">CATEGORY</span></div>
       <h1>POST TITLE</h1>
       <p class="post-header__subtitle">ONE-SENTENCE SUBTITLE THAT EXPANDS ON THE TITLE</p>
       <div class="post-header__meta">
         <span class="post-header__author">
-          <!-- 6. Swap avatar: character-monster.svg / character-spider.svg / character-bicycle.svg -->
-          <img src="/assets/svg/character-monster.svg" alt="" width="20" height="20" style="border-radius:50%;">
+          <!-- 6. Author avatar: person-placeholder.svg until caricatures land, or character-*.svg -->
+          <img src="/assets/svg/person-placeholder.svg" alt="" width="20" height="20" style="border-radius:50%;">
           AUTHOR NAME
         </span>
         <span>MONTH DAY, YEAR</span>
@@ -88,12 +94,12 @@
       </div>
     </header>
 
-    <!-- 7. Optional hero image. Delete this block if the post doesn't need one. -->
+    <!-- 7. Optional hero. Delete this whole block if unused. -->
     <div class="post-hero-art wrap">
       <img src="/assets/svg/hero-illustration.svg" alt="DESCRIBE THE IMAGE" width="1200" height="400">
     </div>
 
-    <!-- 8. Table of contents: one <li> per h2 in the body, id must match the heading's id -->
+    <!-- 8. TOC: one <li> per h2; href id must match the heading id -->
     <div class="toc wrap--prose">
       <span class="toc__label">In this post</span>
       <ol>
@@ -103,22 +109,20 @@
     </div>
 
     <div class="post-body wrap--prose">
-      <p>Opening paragraph.</p>
+      <p>Write your opening paragraph here.</p>
 
       <h2 id="section-one">SECTION ONE HEADING</h2>
       <p>Body copy.</p>
 
-      <!-- Pull quote for a key line -->
-      <div class="pull-quote">PULL QUOTE TEXT</div>
+      <div class="pull-quote">Optional pull quote.</div>
 
       <h2 id="section-two">SECTION TWO HEADING</h2>
       <p>Body copy.</p>
 
-      <!-- Code block -->
-      <pre><code>// code here</code></pre>
+      <pre><code>// optional code block</code></pre>
     </div>
 
-    <!-- 9. Prev/next: point at the posts that come before/after this one chronologically -->
+    <!-- 9. Prev/next: adjacent posts by date. Delete a link if there is no neighbor. -->
     <div class="post-footer wrap--prose">
       <nav class="post-nav" aria-label="Post navigation">
         <a class="post-nav__link" href="/posts/PREVIOUS-SLUG.html">
@@ -133,12 +137,12 @@
     </div>
   </article>
 
-  <!-- 10. Related posts: pick 2 -->
+  <!-- 10. Related posts: keep 1–2 cards, or delete this section -->
   <section class="related-posts">
     <h2 style="margin-bottom: var(--space-md);">Related posts</h2>
     <div class="grid grid--cards">
       <a class="card" href="/posts/RELATED-SLUG-1.html">
-        <img class="card__art" src="/assets/svg/character-monster.svg" alt="" style="width:56px;height:56px;">
+        <img class="card__art" src="/assets/svg/person-placeholder.svg" alt="" style="width:56px;height:56px;">
         <div class="pill-row"><span class="pill pill--craft">CATEGORY</span></div>
         <h3 class="card__title">RELATED POST TITLE</h3>
         <p class="card__excerpt">ONE LINE EXCERPT</p>
@@ -147,7 +151,7 @@
   </section>
 </main>
 
-<!-- Paste components/footer.html here -->
+<!-- Footer: keep in sync with components/footer.html -->
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
     <div>
@@ -155,11 +159,13 @@
         <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
         <span class="brand__title">The Haunted Bicycle</span>
       </a>
+      <p class="site-footer__note">The engineering journal of the Skill Weaver project.</p>
     </div>
     <div>
       <p class="site-footer__heading">Read</p>
       <ul class="site-footer__list">
         <li><a href="/archive.html">Archive</a></li>
+        <li><a href="/index.html#latest">Latest posts</a></li>
         <li><a href="/rss.xml">RSS feed</a></li>
       </ul>
     </div>
@@ -172,7 +178,8 @@
     </div>
   </div>
   <div class="wrap site-footer__bottom">
-    <span>&copy; <span id="year">2026</span> The Skill Weaver Project.</span>
+    <span>&copy; <span id="year">2026</span> Manju, Jesus &amp; Bricen. Images and art by Bryce Hemmie.</span>
+    <span>Hosted on GitHub Pages.</span>
   </div>
 </footer>
 <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
