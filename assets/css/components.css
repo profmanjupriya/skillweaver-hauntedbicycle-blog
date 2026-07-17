@@ -197,7 +197,7 @@
 }
 
 .pill--architecture { color: var(--color-teal-dim); }
-.pill--debugging    { color: var(--color-orange-dim); }
+.pill--testing      { color: var(--color-orange-dim); }
 .pill--assessment   { color: #7A5AA8; }
 .pill--deployment   { color: #3D7A3E; }
 .pill--craft        { color: var(--color-slate); }
@@ -216,12 +216,15 @@ button.pill {
   min-height: 0;
   margin: 0;
   line-height: 1.2;
-  color: inherit;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: inherit;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+button.pill:not([class*="pill--"]) {
+  color: var(--color-charcoal);
 }
 
 .is-hidden { display: none !important; }
