@@ -186,56 +186,6 @@ button.pill {
 
 .is-hidden { display: none !important; }
 
-/* ---- Start here (homepage featured lead, no card chrome) ---- */
-
-.start-here {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-md);
-  max-width: 42rem;
-  text-decoration: none;
-  color: inherit;
-}
-
-.start-here__art {
-  width: 72px;
-  height: 72px;
-  flex-shrink: 0;
-}
-
-.start-here__body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2xs);
-  min-width: 0;
-}
-
-.start-here__title {
-  font-family: var(--font-display);
-  font-size: var(--step-2);
-  color: var(--color-charcoal);
-  margin: 0;
-}
-
-.start-here__excerpt {
-  color: var(--color-slate);
-  font-size: var(--step-0);
-  max-width: none;
-  margin: 0;
-}
-
-.start-here:hover .start-here__title,
-.start-here:focus-visible .start-here__title {
-  color: var(--color-orange-dim);
-}
-
-@media (max-width: 480px) {
-  .start-here {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 /* ---- Article cards ---- */
 
 .card {
@@ -265,6 +215,21 @@ button.pill {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: var(--space-lg);
+}
+
+/* Homepage "Start here": same card language, capped width so it doesn't stretch */
+.card--start {
+  max-width: 22rem;
+  width: 100%;
+}
+
+.card--start .card__art {
+  width: 96px;
+  height: 96px;
+}
+
+.card--start .card__title {
+  font-size: var(--step-1);
 }
 
 .card__meta {
