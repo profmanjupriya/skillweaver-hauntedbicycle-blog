@@ -69,37 +69,42 @@
 
 <main id="main" style="max-width: 1152px; margin-inline: auto; padding-inline: 24px;">
 
-  <!-- INTRO SECTION -->
+  <!-- HEADER -->
   <section style="padding-block: 64px 32px; max-width: 700px;">
     <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; color: #1B6A68; display: inline-block; margin-bottom: 16px;">About this journal</span>
     <h1 style="margin-bottom: 24px;">A journal that admits the codebase has ghosts</h1>
-    <p style="font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #66717E; margin-bottom: 32px;">The Haunted Bicycle is the engineering journal of <strong>Skill Weaver</strong>, an adaptive assessment project. We write about the architecture decisions we made, the ones we regret, the debugging stories worth retelling, and the research behind adaptive testing — in public, as we go.</p>
-    <p style="margin-bottom: 0;">Most engineering blogs read like press releases: clean narratives where every decision was obviously correct in hindsight. Ours doesn't work that way, because software doesn't work that way. Every system we've built long enough has developed a personality — parts that groan under load, parts nobody remembers writing, parts that only work if you don't look at them directly. We started calling that personality a haunting, and the name stuck.</p>
+    <p style="font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #66717E; margin: 0;">The Haunted Bicycle is the engineering journal of <strong>Skill Weaver</strong>, an adaptive assessment project. We write about the architecture decisions we made, the ones we regret, the debugging stories worth retelling, and the research behind adaptive testing — in public, as we go.</p>
   </section>
 
   <!-- THE CAST -->
   <section style="padding-block: 32px;">
-    <div style="max-width: 700px; margin-bottom: 40px;">
-      <h2 style="margin-bottom: 16px;">The cast</h2>
-      <p>Three recurring characters carry the stories — frontend, backend, and the spider that binds them:</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+    <h2 style="margin-bottom: 40px;">The cast</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;">
       <div style="background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
         <img src="/assets/svg/character-monster.svg" alt="Vampire, standing in for the frontend" style="width: 96px; height: 96px; border-radius: 3px; background: #EEEAE1;">
-        <h3 style="margin: 0;">Vampire — the frontend</h3>
-        <p style="color: #66717E; margin: 0;">The face of the bicycle. The Vampire paints the buttons you tap, the pages you scroll, and the quiet polish that makes a haunted system feel rideable — then owns every glitch users see first.</p>
+        <h3 style="margin: 0;">Vampire</h3>
+        <p style="color: #66717E; margin: 0; font-size: 16px;">The face of the bicycle. The Vampire paints the buttons you tap, the pages you scroll, and the quiet polish that makes a haunted system feel rideable — then owns every glitch users see first.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
         <img src="/assets/svg/character-bicycle.svg" alt="Ghost, standing in for the backend" style="width: 96px; height: 96px; border-radius: 3px; background: #EEEAE1;">
-        <h3 style="margin: 0;">Ghost — the backend</h3>
-        <p style="color: #66717E; margin: 0;">The frame you never see while you're pedaling. APIs, data, deploy pipelines — the load-bearing metal that squeaks under pressure and somehow still gets you home.</p>
+        <h3 style="margin: 0;">Ghost</h3>
+        <p style="color: #66717E; margin: 0; font-size: 16px;">The frame you never see while you're pedaling. APIs, data, deploy pipelines — the load-bearing metal that squeaks under pressure and somehow still gets you home.</p>
       </div>
       <div style="background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
         <img src="/assets/svg/character-spider.svg" alt="Spider, the algorithm" style="width: 96px; height: 96px; border-radius: 3px; background: #EEEAE1;">
-        <h3 style="margin: 0;">Spider — the algorithm</h3>
-        <p style="color: #66717E; margin: 0;">Patient, precise, and indifferent to your intentions. Spider spins the adaptive logic that actually decides what happens, thread by thread, long after the commit message is forgotten.</p>
+        <h3 style="margin: 0;">Spider</h3>
+        <p style="color: #66717E; margin: 0; font-size: 16px;">Patient, precise, and indifferent to your intentions. Spider spins the adaptive logic that actually decides what happens, thread by thread, long after the commit message is forgotten.</p>
       </div>
     </div>
+  </section>
+
+  <div style="width: 100%; height: 32px; margin-block: 16px; overflow: hidden;">
+    <img src="/assets/svg/thread-divider.svg" alt="" role="presentation" style="width: 100%; height: 100%;">
+  </div>
+
+  <!-- EXTENDED TEXT -->
+  <section style="padding-block: 16px; max-width: none;">
+    <p style="max-width: none; margin: 0;">Most engineering blogs read like press releases: clean narratives where every decision was obviously correct in hindsight. Ours doesn't work that way, because software doesn't work that way. Every system we've built long enough has developed a personality — parts that groan under load, parts nobody remembers writing, parts that only work if you don't look at them directly. We started calling that personality a haunting, and the name stuck.</p>
   </section>
 
   <div style="width: 100%; height: 32px; margin-block: 16px; overflow: hidden;">
