@@ -1,7 +1,7 @@
 /**
  * The Haunted Bicycle — main.js
  * Vanilla JS, no build step, no dependencies.
- * Handles: mobile nav toggle, reading progress bar, scroll reveal.
+ * Handles: shared header/footer includes, mobile nav, reading progress, scroll reveal.
  */
 
 (function () {
@@ -10,6 +10,64 @@
   var prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
+
+  /* ---- Shared header / footer includes ---- */
+  function loadIncludes() {
+    var slots = document.querySelectorAll("[data-include]");
+    if (!slots.length) return Promise.resolve();
+
+    return Promise.all(
+      Array.prototype.map.call(slots, function (slot) {
+        var name = slot.getAttribute("data-include");
+        if (!name) return Promise.resolve();
+
+        return fetch("/components/" + name + ".html")
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error(
+                "Failed to load /components/" + name + ".html (" + response.status + ")"
+              );
+            }
+            return response.text();
+          })
+          .then(function (html) {
+            var range = document.createRange();
+            range.selectNodeContents(slot);
+            var fragment = range.createContextualFragment(html);
+            slot.replaceWith(fragment);
+          })
+          .catch(function (err) {
+            console.error(err);
+            slot.innerHTML =
+              "<!-- include failed: " + name + " — serve over HTTP, not file:// -->";
+          });
+      })
+    );
+  }
+
+  function normalizePath(path) {
+    path = (path || "").split("?")[0].split("#")[0];
+    if (!path || path === "/") return "/index.html";
+    if (path.endsWith("/")) return path + "index.html";
+    return path;
+  }
+
+  function markCurrentNav() {
+    var current = normalizePath(window.location.pathname);
+    document.querySelectorAll(".site-nav__list .nav-link").forEach(function (link) {
+      var href = normalizePath(link.getAttribute("href"));
+      if (href === current) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  }
+
+  function setYear() {
+    var yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  }
 
   /* ---- Mobile nav toggle ---- */
   function initNav() {
@@ -186,10 +244,20 @@
     render();
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    initNav();
-    initReadingProgress();
-    initReveal();
-    initArchiveFilter();
-  });
+  function boot() {
+    loadIncludes().then(function () {
+      markCurrentNav();
+      setYear();
+      initNav();
+      initReadingProgress();
+      initReveal();
+      initArchiveFilter();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();

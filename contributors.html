@@ -21,32 +21,13 @@
 </head>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap site-header__inner">
-    <a class="brand" href="/index.html">
-      <span class="brand__text">
-        <span class="brand__title">The Haunted Bicycle</span>
-        <span class="brand__eyebrow">Skill Weaver engineering journal</span>
-      </span>
-    </a>
-    <nav class="site-nav" aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav-list"><span>Menu</span></button>
-      <ul class="site-nav__list" id="primary-nav-list">
-        <li><a class="nav-link" href="/index.html">Home</a></li>
-        <li><a class="nav-link" href="/archive.html">Archive</a></li>
-        <li><a class="nav-link" href="/about.html">About</a></li>
-        <li><a class="nav-link" href="/contributors.html" aria-current="page">Contributors</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<div data-include="header"></div>
 
 <main id="main" class="page-compact">
   <section class="wrap section--tight">
     <p class="hero__eyebrow">The people behind the posts</p>
     <h1>Contributors</h1>
-    <p class="hero__lede">Four people make this place. Each has a lane, though the ghosts don't always respect it.</p>
+    <p class="hero__lede">Four people make this place. Each has a lane, though the monsters don't always respect it.</p>
   </section>
 
   <div class="wrap"><div class="thread-divider"><img src="/assets/svg/thread-divider.svg" alt="" role="presentation"></div></div>
@@ -57,27 +38,27 @@
       <article class="contributor-card contributor-card--stacked">
         <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
         <div>
-          <p class="contributor-card__role">Pedagogy &middot; Adaptive Assessment &middot; AI</p>
+          <p class="contributor-card__role">Pedagogy &middot; Adaptive Assessment &middot; Principal Bicycle Exorcist</p>
           <h2 class="card__title">Manju</h2>
-          <p class="card__excerpt">Writes about item response theory, adaptive testing design, and what it takes to keep instructor judgment in the loop as assessment gets more automated. The reason the spider thread runs through this whole project.</p>
+          <p class="card__excerpt">Writes about adaptive testing design, and what it takes to keep instructor judgment in the loop as assessment gets more automated. Keeps the bicycle from spinning out of control.</p>
         </div>
       </article>
 
       <article class="contributor-card contributor-card--stacked">
         <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
         <div>
-          <p class="contributor-card__role">DevOps &middot; Linux &middot; Docker &middot; Deployment</p>
+          <p class="contributor-card__role">System Architecture &middot; DevOps &middot; Docker Necromancer</p>
           <h2 class="card__title">Jesus</h2>
-          <p class="card__excerpt">Covers the infrastructure nobody notices until it breaks: servers, containers, CI, and the deployment pipeline that keeps Skill Weaver running at 2am without anyone getting paged.</p>
+          <p class="card__excerpt">Takes care of the bones of the bicycles that no one notices till it breaks or someone actively breaks it. Raises docker containers from the dead, builds CI, and the deployment pipeline that keeps Skill Weaver running at 3 AM.</p>
         </div>
       </article>
 
       <article class="contributor-card contributor-card--stacked">
         <img class="contributor-card__avatar" src="/assets/svg/person-placeholder.svg" alt="" width="64" height="64">
         <div>
-          <p class="contributor-card__role">Frontend &middot; Debugging &middot; Implementation</p>
+          <p class="contributor-card__role">UI/UX ENgineering &middot; Debugging & Testing &middot; Button Relocation Specialist</p>
           <h2 class="card__title">Bricen</h2>
-          <p class="card__excerpt">Writes the debugging postmortems and implementation notes &mdash; what it actually looked like to chase a bug through someone else's code, including the wrong turns.</p>
+          <p class="card__excerpt"> Writes about making sure the bicycle looks and feels like one. Also gets to be the first one to ride it. Nitpicks everycolor, every pixel, every button placement.</p>
         </div>
       </article>
 
@@ -86,7 +67,7 @@
         <div>
           <p class="contributor-card__role">Illustration &middot; Visual identity</p>
           <h2 class="card__title">Bryce Hemmie</h2>
-          <p class="card__excerpt">Draws the faces of the haunt &mdash; caricatures, character art, and the visual language that keeps Monster, Spider, and Bicycle from looking like stock clipart. Images and art on this site are Bryce's.</p>
+          <p class="card__excerpt">Keeps SkillWeaver from looking like stock clipart or worse. He is also the visual story teller of the project.</p>
         </div>
       </article>
 
@@ -94,36 +75,7 @@
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap site-footer__inner">
-    <div>
-      <a class="brand" href="/index.html" style="color:var(--color-paper); margin-bottom: var(--space-sm); display:inline-flex;">
-        <img class="brand__mark" src="/assets/svg/logo-mark.svg" alt="" width="28" height="28">
-        <span class="brand__title">The Haunted Bicycle</span>
-      </a>
-      <p class="site-footer__note">The engineering journal of the Skill Weaver project.</p>
-    </div>
-    <div>
-      <p class="site-footer__heading">Read</p>
-      <ul class="site-footer__list">
-        <li><a href="/archive.html">Archive</a></li>
-        <li><a href="/index.html#latest">Latest posts</a></li>
-      </ul>
-    </div>
-    <div>
-      <p class="site-footer__heading">Project</p>
-      <ul class="site-footer__list">
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contributors.html">Contributors</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="wrap site-footer__bottom">
-    <span>&copy; <span id="year">2026</span> Manju, Jesus &amp; Bricen. Images and art by Bryce Hemmie.</span>
-    <span>Hosted on GitHub Pages.</span>
-  </div>
-</footer>
-<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<div data-include="footer"></div>
 <script src="/assets/js/main.js"></script>
 </body>
 </html>

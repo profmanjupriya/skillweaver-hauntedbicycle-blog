@@ -8,7 +8,7 @@ Live-ish placeholder domain used throughout this repo: `hauntedbicycle.dev`. Swa
 
 Plain HTML, CSS, and vanilla JS. No framework, no build step, no bundler — per the project goal of zero backend maintenance and a fast static site. Fonts load from Google Fonts (Space Grotesk, Source Serif 4, JetBrains Mono); everything else is self-contained.
 
-Because there's no build step, this site also has **no templating engine**. Shared markup (header, footer) is duplicated across every HTML file rather than included at build time. See "Adding a page" below for the workflow this implies.
+Shared chrome (header, footer) lives in `components/` and is loaded at runtime by `assets/js/main.js` via `data-include` placeholders. Edit those component files once; every page picks up the change.
 
 ## Repository structure
 
@@ -16,11 +16,10 @@ Because there's no build step, this site also has **no templating engine**. Shar
 /
 ├── assets/
 │   ├── css/          variables.css, base.css, layout.css, components.css, post.css
-│   ├── js/            main.js (nav toggle, reading progress, scroll reveal)
+│   ├── js/            main.js (includes, nav toggle, reading progress, scroll reveal)
 │   ├── images/         drop raster images here (og-default.png, etc.)
 │   └── svg/            character illustrations, logo mark, thread divider
-├── components/         canonical source for header.html / footer.html —
-│                        copy-paste reference, not a live include (see below)
+├── components/         live includes: header.html / footer.html (fetched by main.js)
 ├── layouts/
 │   └── post-template.html   copy this to start a new post
 ├── posts/               one HTML file per article
@@ -39,13 +38,25 @@ Because there's no build step, this site also has **no templating engine**. Shar
 
 ## Adding a page
 
-There's no include mechanism, so:
-
 1. Copy the closest existing page (a post → copy `layouts/post-template.html`; a top-level page → copy the nearest sibling, e.g. `about.html`).
 2. Update `<title>`, `<meta name="description">`, `canonical`, `og:*`, and `twitter:*` tags.
-3. Set `aria-current="page"` on the matching nav link, and remove it from wherever it was before.
-4. Paste in the current header/footer from `components/header.html` and `components/footer.html` if either has changed since you last copied a page.
+3. Keep the placeholders — do not paste header/footer markup inline:
+   ```html
+   <div data-include="header"></div>
+   <!-- page content -->
+   <div data-include="footer"></div>
+   <script src="/assets/js/main.js"></script>
+   ```
+   `main.js` marks the current nav link from the URL (`aria-current="page"`).
+4. To change the menu or footer site-wide, edit `components/header.html` or `components/footer.html` only.
 5. If it's a post: add it to `archive.html`, the homepage's "Latest posts" grid, `sitemap.xml`, and `rss.xml`; set correct prev/next links on the posts adjacent to it.
+
+Local preview needs a static server (includes use `fetch`, which browsers block for `file://`):
+
+```bash
+python3 -m http.server 8000
+# then open http://localhost:8000
+```
 
 ## Adding a post
 
