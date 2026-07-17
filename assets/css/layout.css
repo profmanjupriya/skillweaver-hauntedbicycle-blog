@@ -161,7 +161,7 @@
 .thread-divider {
   width: 100%;
   height: 32px;
-  margin-block: var(--space-lg);
+  margin-block: var(--space-2xs);
   overflow: hidden;
 }
 
@@ -183,16 +183,16 @@
 }
 
 .section {
-  padding-block: var(--space-2xl);
+  padding-block: var(--space-sm);
 }
 
-.section--tight { padding-block: var(--space-xl); }
+.section--tight { padding-block: var(--space-2xs); }
 
 .section__head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xs);
   gap: var(--space-md);
   flex-wrap: wrap;
 }
@@ -224,5 +224,5 @@
 
 @media (max-width: 480px) {
   h1 { font-size: var(--step-3); }
-  .section { padding-block: var(--space-xl); }
+  .section { padding-block: var(--space-2xs); }
 }
