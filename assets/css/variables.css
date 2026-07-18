@@ -12,13 +12,13 @@
   --color-charcoal: #30343B;
   --color-charcoal-deep: #22252A;
   --color-slate: #66717E;
-  --color-paper: #F7F5F1;
-  --color-paper-dim: #EEEAE1;
-  --color-paper-line: #DEDACF;
+  --color-paper: #F3F5F6;
+  --color-paper-dim: #E6EAED;
+  --color-paper-line: #D2D8DD;
 
   /* Semantic aliases */
   --color-bg: var(--color-paper);
-  --color-bg-raised: #FFFFFF;
+  --color-bg-raised: #FAFBFC;
   --color-text: var(--color-charcoal);
   --color-text-muted: var(--color-slate);
   --color-accent: var(--color-orange);
