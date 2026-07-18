@@ -27,9 +27,11 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(36, 143, 141, 0.06), transparent 55%),
+    radial-gradient(ellipse 90% 55% at 50% -15%, rgba(36, 143, 141, 0.14), transparent 60%),
+    radial-gradient(ellipse 70% 40% at 100% 100%, rgba(48, 52, 59, 0.05), transparent 55%),
     radial-gradient(circle at 1px 1px, var(--color-paper-line) 1px, transparent 0);
-  background-size: auto, 28px 28px;
+  background-size: auto, auto, 24px 24px;
+  background-attachment: fixed;
   min-height: 100vh;
 }
 

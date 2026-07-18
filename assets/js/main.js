@@ -400,10 +400,10 @@
         return (
           '<a href="/posts/' +
           escapeHtml(post.slug) +
-          '.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #FAFBFC; border: 1px solid #D2D8DD; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">' +
+          '.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #F5F8F9; border: 1px solid #B8C4CB; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">' +
           '<img src="' +
           escapeHtml(post.art) +
-          '" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #E6EAED;">' +
+          '" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #D5DEE2;">' +
           '<span class="pill pill--' +
           escapeHtml(category) +
           '" style="align-self: flex-start;">' +
