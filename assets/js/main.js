@@ -1,7 +1,8 @@
 /**
  * The Haunted Bicycle — main.js
  * Vanilla JS, no build step, no dependencies.
- * Handles: shared header/footer includes, mobile nav, reading progress, scroll reveal.
+ * Handles: shared header/footer includes, post prev/next + related posts,
+ * mobile nav, reading progress, scroll reveal.
  */
 
 (function () {
@@ -67,6 +68,247 @@
   function setYear() {
     var yearEl = document.getElementById("year");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  }
+
+  /* ---- Post catalog (prev/next + related) ---- */
+  var CATEGORY_LABELS = {
+    architecture: "Architecture",
+    database: "Database",
+    assessment: "Adaptive Assessment",
+    deployment: "Deployment",
+    testing: "Testing",
+    craft: "Craft",
+    pedagogy: "Pedagogy",
+    design: "Design"
+  };
+
+  var postsCatalogPromise = null;
+
+  function loadPostsCatalog() {
+    if (!postsCatalogPromise) {
+      postsCatalogPromise = fetch("/data/posts.json")
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error(
+              "Failed to load /data/posts.json (" + response.status + ")"
+            );
+          }
+          return response.json();
+        })
+        .then(function (posts) {
+          if (!Array.isArray(posts)) return [];
+          return posts.slice().sort(function (a, b) {
+            return String(a.date).localeCompare(String(b.date));
+          });
+        });
+    }
+    return postsCatalogPromise;
+  }
+
+  function currentPostSlug() {
+    var path = normalizePath(window.location.pathname);
+    var match = path.match(/\/posts\/([^/]+)\.html$/);
+    return match ? match[1] : null;
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function postNavLinkHtml(post, direction) {
+    if (!post) {
+      var emptyLabel =
+        direction === "prev"
+          ? "You're at the beginning of the archive"
+          : "You're at the end of the archive";
+      var emptyDir =
+        direction === "prev" ? "&larr; Previous" : "Next &rarr;";
+      var emptyClass =
+        direction === "next"
+          ? "post-nav__link post-nav__link--next"
+          : "post-nav__link";
+      return (
+        '<span class="' +
+        emptyClass +
+        '" style="opacity: 0.4; cursor: default;">' +
+        '<span class="post-nav__dir">' +
+        emptyDir +
+        "</span>" +
+        "<div>" +
+        emptyLabel +
+        "</div>" +
+        "</span>"
+      );
+    }
+
+    var className =
+      direction === "next"
+        ? "post-nav__link post-nav__link--next"
+        : "post-nav__link";
+    var dirLabel = direction === "prev" ? "&larr; Previous" : "Next &rarr;";
+    return (
+      '<a class="' +
+      className +
+      '" href="/posts/' +
+      escapeHtml(post.slug) +
+      '.html">' +
+      '<span class="post-nav__dir">' +
+      dirLabel +
+      "</span>" +
+      "<div>" +
+      escapeHtml(post.title) +
+      "</div>" +
+      "</a>"
+    );
+  }
+
+  function renderPostNav(posts, currentSlug) {
+    var slot = document.querySelector("[data-post-nav]");
+    if (!slot) return;
+
+    var index = -1;
+    for (var i = 0; i < posts.length; i++) {
+      if (posts[i].slug === currentSlug) {
+        index = i;
+        break;
+      }
+    }
+    if (index === -1) return;
+
+    var prev = index > 0 ? posts[index - 1] : null;
+    var next = index < posts.length - 1 ? posts[index + 1] : null;
+    slot.innerHTML =
+      postNavLinkHtml(prev, "prev") + postNavLinkHtml(next, "next");
+  }
+
+  function relatedCardHtml(post) {
+    var category = (post.categories && post.categories[0]) || "craft";
+    var label = CATEGORY_LABELS[category] || category;
+    return (
+      '<a class="card" href="/posts/' +
+      escapeHtml(post.slug) +
+      '.html">' +
+      '<img class="card__art" src="' +
+      escapeHtml(post.art) +
+      '" alt="" style="width:56px;height:56px;">' +
+      '<div class="pill-row"><span class="pill pill--' +
+      escapeHtml(category) +
+      '">' +
+      escapeHtml(label) +
+      "</span></div>" +
+      '<h3 class="card__title">' +
+      escapeHtml(post.title) +
+      "</h3>" +
+      '<p class="card__excerpt">' +
+      escapeHtml(post.excerpt) +
+      "</p>" +
+      "</a>"
+    );
+  }
+
+  function pickRelatedPosts(posts, currentSlug, pinnedSlugs, limit) {
+    var bySlug = {};
+    posts.forEach(function (post) {
+      bySlug[post.slug] = post;
+    });
+
+    var selected = [];
+    var seen = {};
+
+    function add(post) {
+      if (!post || post.slug === currentSlug || seen[post.slug]) return;
+      seen[post.slug] = true;
+      selected.push(post);
+    }
+
+    pinnedSlugs.forEach(function (slug) {
+      if (selected.length >= limit) return;
+      add(bySlug[slug]);
+    });
+
+    if (selected.length >= limit) return selected;
+
+    var current = bySlug[currentSlug];
+    var currentCats = (current && current.categories) || [];
+    var others = posts
+      .filter(function (post) {
+        return post.slug !== currentSlug;
+      })
+      .slice()
+      .sort(function (a, b) {
+        return String(b.date).localeCompare(String(a.date));
+      });
+
+    others.forEach(function (post) {
+      if (selected.length >= limit) return;
+      var cats = post.categories || [];
+      var shares = cats.some(function (cat) {
+        return currentCats.indexOf(cat) !== -1;
+      });
+      if (shares) add(post);
+    });
+
+    others.forEach(function (post) {
+      if (selected.length >= limit) return;
+      add(post);
+    });
+
+    return selected;
+  }
+
+  function renderRelatedPosts(posts, currentSlug) {
+    var slot = document.querySelector("[data-related-posts]");
+    if (!slot) return;
+
+    var attr = slot.getAttribute("data-related-posts") || "";
+    var pinnedSlugs = attr
+      .split(",")
+      .map(function (s) {
+        return s.trim();
+      })
+      .filter(Boolean);
+
+    var related = pickRelatedPosts(posts, currentSlug, pinnedSlugs, 2);
+    if (!related.length) {
+      slot.remove();
+      return;
+    }
+
+    slot.innerHTML =
+      '<h2 style="margin-bottom: var(--space-md);">Related posts</h2>' +
+      '<div class="grid grid--cards">' +
+      related.map(relatedCardHtml).join("") +
+      "</div>";
+  }
+
+  function initPostCatalogUi() {
+    var needsNav = document.querySelector("[data-post-nav]");
+    var needsRelated = document.querySelector("[data-related-posts]");
+    if (!needsNav && !needsRelated) return Promise.resolve();
+
+    var currentSlug = currentPostSlug();
+
+    return loadPostsCatalog()
+      .then(function (posts) {
+        if (!posts.length) return;
+        renderPostNav(posts, currentSlug);
+        renderRelatedPosts(posts, currentSlug);
+      })
+      .catch(function (err) {
+        console.error(err);
+        if (needsNav) {
+          needsNav.innerHTML =
+            "<!-- post nav failed — serve over HTTP, not file:// -->";
+        }
+        if (needsRelated) {
+          needsRelated.innerHTML =
+            "<!-- related posts failed — serve over HTTP, not file:// -->";
+        }
+      });
   }
 
   /* ---- Mobile nav toggle ---- */
@@ -252,6 +494,7 @@
       initReadingProgress();
       initReveal();
       initArchiveFilter();
+      return initPostCatalogUi();
     });
   }
 

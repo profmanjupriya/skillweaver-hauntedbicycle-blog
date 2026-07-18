@@ -5,8 +5,8 @@
   ------------------
   Copy this file to posts/your-slug.html, then replace every PLACEHOLDER
   below (search for POST TITLE, POST-SLUG, AUTHOR NAME, CATEGORY, etc.).
-  When done, also add the post to archive.html, index.html (Latest posts),
-  sitemap.xml, and rss.xml — see README §"Adding a post".
+  When done, also add an entry to data/posts.json, then update archive.html,
+  index.html (Latest posts), sitemap.xml, and rss.xml — see README §"Adding a post".
 -->
 <head>
   <meta charset="UTF-8">
@@ -102,33 +102,15 @@
       <pre><code>// optional code block</code></pre>
     </div>
 
-    <!-- 9. Prev/next: adjacent posts by date. Delete a link if there is no neighbor. -->
+    <!-- 9. Prev/next: auto-filled from data/posts.json by date. -->
     <div class="post-footer wrap--prose">
-      <nav class="post-nav" aria-label="Post navigation">
-        <a class="post-nav__link" href="/posts/PREVIOUS-SLUG.html">
-          <span class="post-nav__dir">&larr; Previous</span>
-          <div>PREVIOUS POST TITLE</div>
-        </a>
-        <a class="post-nav__link post-nav__link--next" href="/posts/NEXT-SLUG.html">
-          <span class="post-nav__dir">Next &rarr;</span>
-          <div>NEXT POST TITLE</div>
-        </a>
-      </nav>
+      <nav class="post-nav" aria-label="Post navigation" data-post-nav></nav>
     </div>
   </article>
 
-  <!-- 10. Related posts: keep 1–2 cards, or delete this section -->
-  <section class="related-posts">
-    <h2 style="margin-bottom: var(--space-md);">Related posts</h2>
-    <div class="grid grid--cards">
-      <a class="card" href="/posts/RELATED-SLUG-1.html">
-        <img class="card__art" src="/assets/svg/person-placeholder.svg" alt="" style="width:56px;height:56px;">
-        <div class="pill-row"><span class="pill pill--craft">CATEGORY</span></div>
-        <h3 class="card__title">RELATED POST TITLE</h3>
-        <p class="card__excerpt">ONE LINE EXCERPT</p>
-      </a>
-    </div>
-  </section>
+  <!-- 10. Related posts: auto-filled from data/posts.json (shared categories, else latest).
+       Optional: pin slugs with data-related-posts="slug-a,slug-b". Delete the section to hide. -->
+  <section class="related-posts" data-related-posts></section>
 </main>
 
 <div data-include="footer"></div>
