@@ -4,31 +4,8 @@
     "title": "Ghosts of Systems Past",
     "excerpt": "Every good idea leaves behind a ghost, this is ours.",
     "date": "2026-07-17",
+    "author": "Manju",
     "categories": ["pedagogy", "assessment", "design"],
     "art": "/assets/svg/character-spider.svg"
-  },
-  {
-    "slug": "pulling-one-thread-in-someone-elses-codebase",
-    "title": "Pulling One Thread in Someone Else's Codebase",
-    "excerpt": "What a scoring bug taught us about reading code we didn't write, calmly.",
-    "date": "2026-02-03",
-    "categories": ["testing"],
-    "art": "/assets/svg/character-monster.svg"
-  },
-  {
-    "slug": "three-nginx-files-enter-a-server",
-    "title": "Three Nginx Files Enter a Server",
-    "excerpt": "A deployment postmortem in three configuration files, one of which was lying to us.",
-    "date": "2026-01-20",
-    "categories": ["deployment"],
-    "art": "/assets/svg/character-spider.svg"
-  },
-  {
-    "slug": "why-the-bicycle-is-haunted",
-    "title": "Why the Bicycle Is Haunted",
-    "excerpt": "A manifesto for naming a system after something with a mind of its own.",
-    "date": "2026-01-12",
-    "categories": ["craft"],
-    "art": "/assets/svg/character-bicycle.svg"
   }
 ]

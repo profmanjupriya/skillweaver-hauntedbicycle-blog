@@ -21,20 +21,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hauntedbicycle.dev/posts/why-the-bicycle-is-haunted.html</loc>
-    <lastmod>2026-01-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hauntedbicycle.dev/posts/three-nginx-files-enter-a-server.html</loc>
-    <lastmod>2026-01-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://hauntedbicycle.dev/posts/pulling-one-thread-in-someone-elses-codebase.html</loc>
-    <lastmod>2026-02-03</lastmod>
+    <loc>https://hauntedbicycle.dev/posts/ghosts-of-systems-past.html</loc>
+    <lastmod>2026-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>

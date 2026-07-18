@@ -90,29 +90,7 @@
     </div>
     <div style="position: relative; display: flex; align-items: center; gap: 12px;">
       <button aria-label="Scroll left" onclick="document.getElementById('carousel').scrollBy({left: -document.getElementById('carousel').clientWidth * 0.9, behavior: 'smooth'})" style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #248F8D; background: #FFFFFF; color: #248F8D; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center;">&larr;</button>
-      <div id="carousel" style="display: flex; gap: 24px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; padding-block: 4px; flex: 1;">
-        <a href="/posts/why-the-bicycle-is-haunted.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">
-          <img src="/assets/svg/character-bicycle.svg" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #EEEAE1;">
-          <span style="display: inline-flex; align-self: flex-start; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; padding: 0.3em 0.7em; border-radius: 999px; border: 1px solid #66717E; color: #66717E;">Craft</span>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #30343B; margin: 0;">Why the Bicycle Is Haunted</h3>
-          <p style="color: #66717E; font-size: 14px; margin: 0;">On naming a system after something that develops a mind of its own.</p>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #66717E; display: flex; gap: 12px; margin: 0;"><span>Manju</span><span>&middot;</span><span>Jan 12, 2026</span></p>
-        </a>
-        <a href="/posts/three-nginx-files-enter-a-server.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">
-          <img src="/assets/svg/character-spider.svg" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #EEEAE1;">
-          <span style="display: inline-flex; align-self: flex-start; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; padding: 0.3em 0.7em; border-radius: 999px; border: 1px solid #3D7A3E; color: #3D7A3E;">Deployment</span>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #30343B; margin: 0;">Three Nginx Files Enter a Server</h3>
-          <p style="color: #66717E; font-size: 14px; margin: 0;">A deployment postmortem in three configuration files, one of which was lying to us.</p>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #66717E; display: flex; gap: 12px; margin: 0;"><span>Jesus</span><span>&middot;</span><span>Jan 20, 2026</span></p>
-        </a>
-        <a href="/posts/pulling-one-thread-in-someone-elses-codebase.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">
-          <img src="/assets/svg/character-monster.svg" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #EEEAE1;">
-          <span style="display: inline-flex; align-self: flex-start; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; padding: 0.3em 0.7em; border-radius: 999px; border: 1px solid #C96F17; color: #C96F17;">Testing</span>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #30343B; margin: 0;">Pulling One Thread in Someone Else's Codebase</h3>
-          <p style="color: #66717E; font-size: 14px; margin: 0;">What a scoring bug taught us about reading code we didn't write, calmly.</p>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #66717E; display: flex; gap: 12px; margin: 0;"><span>Bricen</span><span>&middot;</span><span>Feb 3, 2026</span></p>
-        </a>
-      </div>
+      <div id="carousel" data-latest-posts style="display: flex; gap: 24px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; padding-block: 4px; flex: 1;"></div>
       <button aria-label="Scroll right" onclick="document.getElementById('carousel').scrollBy({left: document.getElementById('carousel').clientWidth * 0.9, behavior: 'smooth'})" style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #248F8D; background: #FFFFFF; color: #248F8D; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center;">&rarr;</button>
     </div>
   </section>

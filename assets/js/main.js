@@ -119,6 +119,32 @@
       .replace(/"/g, "&quot;");
   }
 
+  function formatPostDate(iso) {
+    var parts = String(iso || "").split("-");
+    if (parts.length !== 3) return String(iso || "");
+    var months = [
+      "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    var month = months[Number(parts[1]) - 1] || parts[1];
+    return month + " " + Number(parts[2]) + ", " + parts[0];
+  }
+
+  function categoryPillsHtml(categories) {
+    return (categories || [])
+      .map(function (category) {
+        var label = CATEGORY_LABELS[category] || category;
+        return (
+          '<span class="pill pill--' +
+          escapeHtml(category) +
+          '">' +
+          escapeHtml(label) +
+          "</span>"
+        );
+      })
+      .join("");
+  }
+
   function postNavLinkHtml(post, direction) {
     if (!post) {
       var emptyLabel =
@@ -285,10 +311,98 @@
       "</div>";
   }
 
+  function renderArchiveGrid(posts) {
+    var grid = document.querySelector("[data-archive-grid]");
+    if (!grid) return;
+
+    var newestFirst = posts.slice().reverse();
+    grid.innerHTML = newestFirst
+      .map(function (post) {
+        var cats = post.categories || [];
+        var meta = [];
+        if (post.author) meta.push("<span>" + escapeHtml(post.author) + "</span>");
+        if (post.date) meta.push("<span>" + escapeHtml(formatPostDate(post.date)) + "</span>");
+        if (post.readMinutes) {
+          meta.push("<span>" + escapeHtml(String(post.readMinutes)) + " min</span>");
+        }
+
+        return (
+          '<a class="card" href="/posts/' +
+          escapeHtml(post.slug) +
+          '.html" data-category="' +
+          escapeHtml(cats.join(" ")) +
+          '">' +
+          '<img class="card__art" src="' +
+          escapeHtml(post.art) +
+          '" alt="" style="width:56px;height:56px;">' +
+          '<div class="pill-row">' +
+          categoryPillsHtml(cats) +
+          "</div>" +
+          '<h2 class="card__title">' +
+          escapeHtml(post.title) +
+          "</h2>" +
+          '<p class="card__excerpt">' +
+          escapeHtml(post.excerpt) +
+          "</p>" +
+          (meta.length
+            ? '<p class="card__meta">' + meta.join("<span>&middot;</span>") + "</p>"
+            : "") +
+          "</a>"
+        );
+      })
+      .join("");
+  }
+
+  function renderLatestPosts(posts) {
+    var slot = document.querySelector("[data-latest-posts]");
+    if (!slot) return;
+
+    var newestFirst = posts.slice().reverse();
+    slot.innerHTML = newestFirst
+      .map(function (post) {
+        var category = (post.categories && post.categories[0]) || "craft";
+        var label = CATEGORY_LABELS[category] || category;
+        var meta = [];
+        if (post.author) meta.push("<span>" + escapeHtml(post.author) + "</span>");
+        if (post.date) meta.push("<span>" + escapeHtml(formatPostDate(post.date)) + "</span>");
+
+        return (
+          '<a href="/posts/' +
+          escapeHtml(post.slug) +
+          '.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #FFFFFF; border: 1px solid #DEDACF; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">' +
+          '<img src="' +
+          escapeHtml(post.art) +
+          '" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #EEEAE1;">' +
+          '<span class="pill pill--' +
+          escapeHtml(category) +
+          '" style="align-self: flex-start;">' +
+          escapeHtml(label) +
+          "</span>" +
+          '<h3 style="font-family: \'Space Grotesk\', sans-serif; font-weight: 600; font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #30343B; margin: 0;">' +
+          escapeHtml(post.title) +
+          "</h3>" +
+          '<p style="color: #66717E; font-size: 14px; margin: 0;">' +
+          escapeHtml(post.excerpt) +
+          "</p>" +
+          (meta.length
+            ? '<p style="font-family: \'JetBrains Mono\', monospace; font-size: 0.72rem; color: #66717E; display: flex; gap: 12px; margin: 0;">' +
+              meta.join("<span>&middot;</span>") +
+              "</p>"
+            : "") +
+          "</a>"
+        );
+      })
+      .join("");
+  }
+
   function initPostCatalogUi() {
     var needsNav = document.querySelector("[data-post-nav]");
     var needsRelated = document.querySelector("[data-related-posts]");
-    if (!needsNav && !needsRelated) return Promise.resolve();
+    var needsArchive = document.querySelector("[data-archive-grid]");
+    var needsLatest = document.querySelector("[data-latest-posts]");
+    if (!needsNav && !needsRelated && !needsArchive && !needsLatest) {
+      return Promise.resolve();
+    }
 
     var currentSlug = currentPostSlug();
 
@@ -297,6 +411,8 @@
         if (!posts.length) return;
         renderPostNav(posts, currentSlug);
         renderRelatedPosts(posts, currentSlug);
+        renderArchiveGrid(posts);
+        renderLatestPosts(posts);
       })
       .catch(function (err) {
         console.error(err);
@@ -307,6 +423,14 @@
         if (needsRelated) {
           needsRelated.innerHTML =
             "<!-- related posts failed — serve over HTTP, not file:// -->";
+        }
+        if (needsArchive) {
+          needsArchive.innerHTML =
+            "<!-- archive failed — serve over HTTP, not file:// -->";
+        }
+        if (needsLatest) {
+          needsLatest.innerHTML =
+            "<!-- latest posts failed — serve over HTTP, not file:// -->";
         }
       });
   }
@@ -419,7 +543,8 @@
     function matchingCards() {
       if (activeFilter === "all") return cards;
       return cards.filter(function (card) {
-        return card.getAttribute("data-category") === activeFilter;
+        var cats = (card.getAttribute("data-category") || "").split(/\s+/);
+        return cats.indexOf(activeFilter) !== -1;
       });
     }
 
@@ -487,15 +612,18 @@
   }
 
   function boot() {
-    loadIncludes().then(function () {
-      markCurrentNav();
-      setYear();
-      initNav();
-      initReadingProgress();
-      initReveal();
-      initArchiveFilter();
-      return initPostCatalogUi();
-    });
+    loadIncludes()
+      .then(function () {
+        markCurrentNav();
+        setYear();
+        initNav();
+        initReadingProgress();
+        initReveal();
+        return initPostCatalogUi();
+      })
+      .then(function () {
+        initArchiveFilter();
+      });
   }
 
   if (document.readyState === "loading") {

@@ -5,33 +5,15 @@
     <link>https://hauntedbicycle.dev/index.html</link>
     <description>The engineering journal of the Skill Weaver project: architecture decisions, testing stories, adaptive assessment research, and deployment lessons.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 00:00:00 GMT</lastBuildDate>
 
     <item>
-      <title>Pulling One Thread in Someone Else's Codebase</title>
-      <link>https://hauntedbicycle.dev/posts/pulling-one-thread-in-someone-elses-codebase.html</link>
-      <guid>https://hauntedbicycle.dev/posts/pulling-one-thread-in-someone-elses-codebase.html</guid>
-      <description>What a scoring bug taught us about reading code we didn't write, calmly.</description>
-      <author>Bricen</author>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <item>
-      <title>Three Nginx Files Enter a Server</title>
-      <link>https://hauntedbicycle.dev/posts/three-nginx-files-enter-a-server.html</link>
-      <guid>https://hauntedbicycle.dev/posts/three-nginx-files-enter-a-server.html</guid>
-      <description>A deployment postmortem in three configuration files, one of which was lying to us.</description>
-      <author>Jesus</author>
-      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
-    </item>
-
-    <item>
-      <title>Why the Bicycle Is Haunted</title>
-      <link>https://hauntedbicycle.dev/posts/why-the-bicycle-is-haunted.html</link>
-      <guid>https://hauntedbicycle.dev/posts/why-the-bicycle-is-haunted.html</guid>
-      <description>A manifesto for naming a system after something with a mind of its own.</description>
+      <title>Ghosts of Systems Past</title>
+      <link>https://hauntedbicycle.dev/posts/ghosts-of-systems-past.html</link>
+      <guid>https://hauntedbicycle.dev/posts/ghosts-of-systems-past.html</guid>
+      <description>Every good idea leaves behind a ghost, this is ours.</description>
       <author>Manju</author>
-      <pubDate>Mon, 12 Jan 2026 00:00:00 GMT</pubDate>
+      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
     </item>
 
   </channel>
