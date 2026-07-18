@@ -49,7 +49,7 @@ Shared chrome (header, footer) lives in `components/` and is loaded at runtime b
    ```
    `main.js` marks the current nav link from the URL (`aria-current="page"`).
 4. To change the menu or footer site-wide, edit `components/header.html` or `components/footer.html` only.
-5. If it's a post: add it to `archive.html`, the homepage's "Latest posts" grid, `sitemap.xml`, and `rss.xml`; set correct prev/next links on the posts adjacent to it.
+5. If it's a post: follow **Adding a post** below (`data/posts.json`, `sitemap.xml`, `rss.xml`). Homepage, archive, prev/next, and related posts update from the catalog automatically.
 
 Local preview needs a static server (includes use `fetch`, which browsers block for `file://`):
 
@@ -60,11 +60,37 @@ python3 -m http.server 8000
 
 ## Adding a post
 
+### Write
+
 1. `cp layouts/post-template.html posts/your-slug.html`
-2. Work through the numbered HTML comments in the template — they cover title, meta tags, category pill, hero image, table of contents, body, prev/next nav, and related posts.
+2. Fill the template (title, meta, category pills, hero, TOC, body). Prev/next and related posts fill themselves from the catalog.
 3. Category must be one of: **Architecture, Database, Adaptive Assessment, Deployment, Testing, Craft, Pedagogy, Design** — these map to the `.pill--*` classes in `components.css` and the filters on `archive.html`.
-4. Add the post to `archive.html`, the homepage grid, `sitemap.xml`, and `rss.xml`.
-5. Open a PR using the template in `.github/PULL_REQUEST_TEMPLATE.md`. One review required before merging (see Contributor workflow below).
+
+### Publish
+
+Required for the post to appear on the homepage and archive. A file in `posts/` alone does not list it.
+
+4. Add one entry to `data/posts.json`:
+
+```json
+{
+  "slug": "your-slug",
+  "title": "Your Title",
+  "excerpt": "One-line summary.",
+  "date": "2026-07-17",
+  "author": "Your Name",
+  "categories": ["craft"],
+  "art": "/assets/svg/character-bicycle.svg"
+}
+```
+
+5. Order is by `"date"` (`YYYY-MM-DD`), newest first; prev/next use the same dates. Omit the JSON entry for drafts (the HTML file can exist without being listed).
+
+### Finish
+
+6. Add the post to `sitemap.xml` and `rss.xml`.
+7. Preview over HTTP (not `file://`): `python3 -m http.server 8000` — then open `http://localhost:8000` so `data/posts.json` and shared components can load.
+8. Open a PR using the template in `.github/PULL_REQUEST_TEMPLATE.md`. One review required before merging (see Contributor workflow below).
 
 ## Design system
 

@@ -84,25 +84,49 @@
 
   var postsCatalogPromise = null;
 
+  function comparePostsByDateAsc(a, b) {
+    var byDate = String(a.date || "").localeCompare(String(b.date || ""));
+    if (byDate !== 0) return byDate;
+    return String(a.slug || "").localeCompare(String(b.slug || ""));
+  }
+
+  function postsOldestFirst(posts) {
+    return posts.slice().sort(comparePostsByDateAsc);
+  }
+
+  function postsNewestFirst(posts) {
+    return postsOldestFirst(posts).reverse();
+  }
+
+  function fetchPostsJson(url) {
+    return fetch(url).then(function (response) {
+      if (!response.ok) {
+        throw new Error("Failed to load " + url + " (" + response.status + ")");
+      }
+      return response.json();
+    });
+  }
+
   function loadPostsCatalog() {
     if (!postsCatalogPromise) {
-      postsCatalogPromise = fetch("/data/posts.json")
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error(
-              "Failed to load /data/posts.json (" + response.status + ")"
-            );
-          }
-          return response.json();
+      postsCatalogPromise = fetchPostsJson("/data/posts.json")
+        .catch(function () {
+          return fetchPostsJson("data/posts.json");
         })
         .then(function (posts) {
           if (!Array.isArray(posts)) return [];
-          return posts.slice().sort(function (a, b) {
-            return String(a.date).localeCompare(String(b.date));
-          });
+          return postsOldestFirst(posts);
         });
     }
     return postsCatalogPromise;
+  }
+
+  function catalogEmptyStateHtml(message) {
+    return (
+      '<p style="color: var(--color-slate); margin: 0;">' +
+      escapeHtml(message) +
+      "</p>"
+    );
   }
 
   function currentPostSlug() {
@@ -260,14 +284,11 @@
 
     var current = bySlug[currentSlug];
     var currentCats = (current && current.categories) || [];
-    var others = posts
-      .filter(function (post) {
+    var others = postsNewestFirst(
+      posts.filter(function (post) {
         return post.slug !== currentSlug;
       })
-      .slice()
-      .sort(function (a, b) {
-        return String(b.date).localeCompare(String(a.date));
-      });
+    );
 
     others.forEach(function (post) {
       if (selected.length >= limit) return;
@@ -315,7 +336,12 @@
     var grid = document.querySelector("[data-archive-grid]");
     if (!grid) return;
 
-    var newestFirst = posts.slice().reverse();
+    var newestFirst = postsNewestFirst(posts);
+    if (!newestFirst.length) {
+      grid.innerHTML = catalogEmptyStateHtml("No published posts yet.");
+      return;
+    }
+
     grid.innerHTML = newestFirst
       .map(function (post) {
         var cats = post.categories || [];
@@ -357,7 +383,12 @@
     var slot = document.querySelector("[data-latest-posts]");
     if (!slot) return;
 
-    var newestFirst = posts.slice().reverse();
+    var newestFirst = postsNewestFirst(posts);
+    if (!newestFirst.length) {
+      slot.innerHTML = catalogEmptyStateHtml("No published posts yet.");
+      return;
+    }
+
     slot.innerHTML = newestFirst
       .map(function (post) {
         var category = (post.categories && post.categories[0]) || "craft";
@@ -405,10 +436,11 @@
     }
 
     var currentSlug = currentPostSlug();
+    var failMessage =
+      "Could not load posts. Serve the site over HTTP (not file://) so data/posts.json can load.";
 
     return loadPostsCatalog()
       .then(function (posts) {
-        if (!posts.length) return;
         renderPostNav(posts, currentSlug);
         renderRelatedPosts(posts, currentSlug);
         renderArchiveGrid(posts);
@@ -417,20 +449,16 @@
       .catch(function (err) {
         console.error(err);
         if (needsNav) {
-          needsNav.innerHTML =
-            "<!-- post nav failed — serve over HTTP, not file:// -->";
+          needsNav.innerHTML = catalogEmptyStateHtml(failMessage);
         }
         if (needsRelated) {
-          needsRelated.innerHTML =
-            "<!-- related posts failed — serve over HTTP, not file:// -->";
+          needsRelated.innerHTML = catalogEmptyStateHtml(failMessage);
         }
         if (needsArchive) {
-          needsArchive.innerHTML =
-            "<!-- archive failed — serve over HTTP, not file:// -->";
+          needsArchive.innerHTML = catalogEmptyStateHtml(failMessage);
         }
         if (needsLatest) {
-          needsLatest.innerHTML =
-            "<!-- latest posts failed — serve over HTTP, not file:// -->";
+          needsLatest.innerHTML = catalogEmptyStateHtml(failMessage);
         }
       });
   }
