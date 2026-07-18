@@ -96,7 +96,7 @@ Required for the post to appear on the homepage and archive. A file in `posts/` 
 
 Palette, type, spacing, and breakpoints are all defined as CSS custom properties in `assets/css/variables.css` — start there before hand-writing any new color or font-size.
 
-- **Color**: Orange `#F28C28`, Teal `#248F8D`, Charcoal `#30343B`, Slate `#66717E`, Fog `#E7EEF0`.
+- **Color**: Orange `#F28C28`, Teal `#248F8D`, Navy `#1B365D` (headings/bold, from [Skill Weaver](https://skill-weaver.com/login)), Charcoal `#30343B`, Slate `#66717E`, Cool white `#F7FAFC`.
 - **Type**: Space Grotesk for headings, Source Serif 4 for body copy, JetBrains Mono for code and metadata.
 - **Breakpoints**: 480 / 768 / 1024 / 1440px, mobile-first.
 - **Signature element**: the "thread divider" (`assets/svg/thread-divider.svg`) — a dashed spider-silk line used between homepage/about sections. It's the one recurring visual motif; don't reach for it as generic decoration, only as an actual section break.

@@ -12,13 +12,15 @@
   --color-charcoal: #30343B;
   --color-charcoal-deep: #22252A;
   --color-slate: #66717E;
-  --color-paper: #E7EEF0;
-  --color-paper-dim: #D5DEE2;
-  --color-paper-line: #B8C4CB;
+  /* Skill Weaver login / brand navy — used for headings & bold */
+  --color-navy: #1b365d;
+  --color-paper: #F7FAFC;
+  --color-paper-dim: #E8EEF4;
+  --color-paper-line: #D0D9E3;
 
   /* Semantic aliases */
   --color-bg: var(--color-paper);
-  --color-bg-raised: #F5F8F9;
+  --color-bg-raised: #FFFFFF;
   --color-text: var(--color-charcoal);
   --color-text-muted: var(--color-slate);
   --color-accent: var(--color-orange);

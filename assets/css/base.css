@@ -27,10 +27,9 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   background-image:
-    radial-gradient(ellipse 90% 55% at 50% -15%, rgba(36, 143, 141, 0.14), transparent 60%),
-    radial-gradient(ellipse 70% 40% at 100% 100%, rgba(48, 52, 59, 0.05), transparent 55%),
+    radial-gradient(ellipse 90% 50% at 50% -20%, rgba(27, 54, 93, 0.05), transparent 55%),
     radial-gradient(circle at 1px 1px, var(--color-paper-line) 1px, transparent 0);
-  background-size: auto, auto, 24px 24px;
+  background-size: auto, 28px 28px;
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -42,13 +41,18 @@ h1, h2, h3, h4 {
   line-height: 1.15;
   font-weight: 600;
   letter-spacing: -0.01em;
-  color: var(--color-charcoal);
+  color: var(--color-navy);
 }
 
 h1 { font-size: var(--step-4); }
 h2 { font-size: var(--step-3); }
 h3 { font-size: var(--step-2); }
 h4 { font-size: var(--step-1); }
+
+strong, b {
+  color: var(--color-navy);
+  font-weight: 600;
+}
 
 p { max-width: 70ch; }
 

@@ -19,7 +19,7 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(231, 238, 240, 0.9);
+  background: rgba(247, 250, 252, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: var(--border-thin);
 }
@@ -37,7 +37,7 @@
   align-items: center;
   gap: var(--space-xs);
   text-decoration: none;
-  color: var(--color-charcoal);
+  color: var(--color-navy);
 }
 
 .brand__mark { width: 34px; height: 34px; flex-shrink: 0; }

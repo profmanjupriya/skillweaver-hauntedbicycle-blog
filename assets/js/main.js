@@ -400,16 +400,16 @@
         return (
           '<a href="/posts/' +
           escapeHtml(post.slug) +
-          '.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #F5F8F9; border: 1px solid #B8C4CB; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">' +
+          '.html" style="flex: 0 0 calc((100% - 48px) / 3); min-width: 280px; background: #FFFFFF; border: 1px solid #D0D9E3; border-radius: 6px; padding: 24px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit;">' +
           '<img src="' +
           escapeHtml(post.art) +
-          '" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #D5DEE2;">' +
+          '" alt="" width="80" height="80" style="width: 56px; height: 56px; border-radius: 3px; background: #E8EEF4;">' +
           '<span class="pill pill--' +
           escapeHtml(category) +
           '" style="align-self: flex-start;">' +
           escapeHtml(label) +
           "</span>" +
-          '<h3 style="font-family: \'Space Grotesk\', sans-serif; font-weight: 600; font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #30343B; margin: 0;">' +
+          '<h3 style="font-family: \'Space Grotesk\', sans-serif; font-weight: 600; font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #1b365d; margin: 0;">' +
           escapeHtml(post.title) +
           "</h3>" +
           '<p style="color: #66717E; font-size: 14px; margin: 0;">' +
