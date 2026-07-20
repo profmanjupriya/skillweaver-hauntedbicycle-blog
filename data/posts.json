@@ -7,5 +7,14 @@
     "author": "Manju",
     "categories": ["pedagogy", "assessment", "design"],
     "art": "/assets/svg/character-spider.svg"
+  },
+  {
+    "slug": "the-great-migration",
+    "title": "The Great Migration",
+    "excerpt": "It wasn't actually that great, we just moved our services off of DigitalOcean.",
+    "date": "2026-07-20",
+    "author": "Jesus",
+    "categories": ["archiecture", "deployment"],
+    "art": "/assets/svg/person-placeholder.svg"
   }
 ]

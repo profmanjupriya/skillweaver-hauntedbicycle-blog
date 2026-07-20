@@ -2,18 +2,27 @@
 <rss version="2.0">
   <channel>
     <title>The Haunted Bicycle</title>
-    <link>https://hauntedbicycle.dev/index.html</link>
+    <link>https://blog.skill-weaver.com/index.html</link>
     <description>The engineering journal of the Skill Weaver project: architecture decisions, testing stories, adaptive assessment research, and deployment lessons.</description>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Jul 2026 00:00:00 GMT</lastBuildDate>
 
     <item>
       <title>Ghosts of Systems Past</title>
-      <link>https://hauntedbicycle.dev/posts/ghosts-of-systems-past.html</link>
-      <guid>https://hauntedbicycle.dev/posts/ghosts-of-systems-past.html</guid>
+      <link>https://blog.skill-weaver.com/posts/ghosts-of-systems-past.html</link>
+      <guid>https://blog.skill-weaver.com/posts/ghosts-of-systems-past.html</guid>
       <description>Every good idea leaves behind a ghost, this is ours.</description>
       <author>Manju</author>
       <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>The Great Migration</title>
+      <link>https://blog.skill-weaver.com/posts/the-great-migration.html</link>
+      <guid>https://blog.skill-weaver.com/posts/the-great-migration.html</guid>
+      <description>It wasn't actually that great, we just moved our services off of DigitalOcean.</description>
+      <author>Jesus</author>
+      <pubDate>Fri, 20 Jul 2026 00:00:00 GMT</pubDate>
     </item>
 
   </channel>

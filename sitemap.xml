@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hauntedbicycle.dev/index.html</loc>
+    <loc>https://blog.skill-weaver.com/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hauntedbicycle.dev/archive.html</loc>
+    <loc>https://blog.skill-weaver.com/archive.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hauntedbicycle.dev/about.html</loc>
+    <loc>https://blog.skill-weaver.com/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hauntedbicycle.dev/contributors.html</loc>
+    <loc>https://blog.skill-weaver.com/contributors.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://hauntedbicycle.dev/posts/ghosts-of-systems-past.html</loc>
+    <loc>https://blog.skill-weaver.com/posts/ghosts-of-systems-past.html</loc>
     <lastmod>2026-07-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://blog.skill-weaver.com/posts/the-great-migration.html</loc>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
