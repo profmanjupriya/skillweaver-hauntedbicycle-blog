@@ -16,5 +16,14 @@
     "author": "Jesus",
     "categories": ["archiecture", "deployment"],
     "art": "/assets/svg/person-placeholder.svg"
+  },
+  {
+    "slug": "to-gamify-learning",
+    "title": "To Gamify Learning",
+    "excerpt": "Using game logic as a powerful tool for learning.",
+    "date": "2026-07-21",
+    "author": "Bricen",
+    "categories": ["craft", "design"],
+    "art": "/assets/svg/person-placeholder.svg"
   }
 ]

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  BLANK POST STARTER
+  ------------------
+  Copy this file to posts/your-slug.html, then replace every PLACEHOLDER
+  below (search for POST TITLE, POST-SLUG, AUTHOR NAME, CATEGORY, etc.).
+  When done, add an entry to data/posts.json with "date": "YYYY-MM-DD"
+  (that publishes it to homepage + archive; order is by date, newest first).
+  Keep drafts out of posts.json until ready. Also update sitemap.xml and
+  rss.xml — see README §"Adding a post".
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 1. Title format: "Post Title — The Haunted Bicycle" -->
+  <title>To Gamify Learning — The Haunted Bicycle</title>
+
+  <!-- 2. Meta description (150–160 chars) -->
+  <meta name="description" content="Using game logic as a powerful tool for learning.">
+
+  <!-- 3. Canonical + og:url must match the real filename -->
+  <link rel="canonical" href="https://hauntedbicycle.dev/posts/to-gamify-learning.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="To Gamify Learning">
+  <meta property="og:description" content="Using game logic as a powerful tool for learning.">
+  <meta property="og:url" content="https://hauntedbicycle.dev/posts/to-gamify-learning.html">
+  <meta property="article:author" content="Bricen">
+  <meta property="article:published_time" content="2026-07-21">
+  <!-- 4. Category: Architecture | Database | Adaptive Assessment | Deployment | Craft | Pedagogy | Design -->
+  <meta property="article:section" content="Design">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/post.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "To Gamify Learning",
+    "author": { "@type": "Person", "name": "Bricen" },
+    "datePublished": "2026-07-21",
+    "description": "Using game logic as a powerful tool for learning."
+    "url": "https://blog.skill-weaver.com/posts/to-gamify-learning.html",
+    "articleSection": ["Craft", "Design"],
+    "keywords": ["Craft", "Design", "Game Logic", "Learning"]
+  }
+  </script>
+</head>
+<body>
+
+<div data-include="header"></div>
+
+<main id="main">
+  <article data-reading-progress>
+    <header class="post-header wrap">
+      <!-- 5. Pill classes: pill--architecture | pill--database | pill--assessment | pill--deployment | pill--testing | pill--craft | pill--pedagogy | pill--design -->
+      <div class="pill-row"><span class="pill pill--craft">Design</span></div>
+      <h1>To Gamify Learning</h1>
+      <p class="post-header__subtitle">Games are fun, so why can't learning be?</p>
+      <div class="post-header__meta">
+        <span class="post-header__author">
+          <!-- 6. Author avatar: person-placeholder.svg until caricatures land, or character-*.svg -->
+          <img src="/assets/svg/person-placeholder.svg" alt="" width="20" height="20" style="border-radius:50%;">
+          Bricen Humphrey Schaefer
+        </span>
+        <span>July 21, 2026</span>
+        <span>5 min read</span>
+      </div>
+    </header>
+
+    <!-- 7. Optional hero. Delete this whole block if unused. -->
+    <div class="post-hero-art wrap">
+      <img src="/assets/svg/hero-illustration.svg" alt="DESCRIBE THE IMAGE" width="1200" height="400">
+    </div>
+
+    <!-- 8. TOC: one <li> per h2; href id must match the heading id -->
+    <div class="toc wrap--prose">
+      <span class="toc__label">In this post</span>
+      <ol>
+        <li><a href="#section-one">The Idea Behind Using Gamified Learning</a></li>
+        <li><a href="#section-two">The Outcome</a></li>
+      </ol>
+    </div>
+
+    <div class="post-body wrap--prose">
+      <p>When Skillweaver was first starting to progress, I couldn't help 
+        but think about how the student would use the platform. Although Skillweaver
+        was made to support teachers, I couldn't help but think about how 
+        to get students to enjoy the learning process.</p>
+
+      <h2 id="section-one">The Idea Behind Using Gamified Learning</h2>
+      <p>Games are a fun pass time to most people, well not actually, the
+        real reason games are fun is because of the challenge they provide.
+        When students are challenged, and a goal is set, to be acheived students
+        will be more likely to engage with the learning process. It is like beating
+        a level and still having to learn how to beat the next level.
+      </p>
+
+      <h2 id="section-two">The Outcome</h2>
+      <p>Skills, progression and mastery. The perfect combination for moving
+        forward and keeping students engaged, while also providing instructors
+        the feedback that they need to know where a student is struggling. Seeing 
+        the feature working, made me really happy because as someone who does enjoy games,
+        I feel like when it gets added to a learning environment, it will make the learning process 
+        more engaging and enjoyable.
+      </p>
+
+      <p>
+
+      </p>
+    </div>
+
+    <!-- 9. Prev/next: auto-filled from data/posts.json by date. -->
+    <div class="post-footer wrap--prose">
+      <nav class="post-nav" aria-label="Post navigation" data-post-nav></nav>
+    </div>
+  </article>
+
+  <!-- 10. Related posts: auto-filled from data/posts.json (shared categories, else latest).
+       Optional: pin slugs with data-related-posts="slug-a,slug-b". Delete the section to hide. -->
+  <section class="related-posts" data-related-posts></section>
+</main>
+
+<div data-include="footer"></div>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
