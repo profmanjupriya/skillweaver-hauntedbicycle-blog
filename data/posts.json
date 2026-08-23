@@ -6,7 +6,7 @@
     "date": "2026-07-17",
     "author": "Manju",
     "categories": ["pedagogy", "assessment", "design"],
-    "art": "/assets/svg/character-spider.svg"
+    "art": "/assets/images/IconManju.png"
   },
   {
     "slug": "the-great-migration",
@@ -15,7 +15,7 @@
     "date": "2026-07-20",
     "author": "Jesus",
     "categories": ["architecture", "deployment"],
-    "art": "/assets/svg/person-placeholder.svg"
+    "art": "/assets/images/IconJesus.png"
   },
   {
     "slug": "to-gamify-learning",
@@ -24,6 +24,6 @@
     "date": "2026-07-21",
     "author": "Bricen",
     "categories": ["craft", "design"],
-    "art": "/assets/svg/person-placeholder.svg"
+    "art": "/assets/images/IconBricen.png"
   }
 ]
