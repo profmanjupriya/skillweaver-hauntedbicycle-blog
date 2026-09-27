@@ -3,22 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Haunted Bicycle — Skill Weaver Engineering Journal</title>
-  <meta name="description" content="The engineering journal of the Skill Weaver project: architecture decisions, testing stories, adaptive assessment research, and deployment lessons.">
+  <title>We'll be back soon — The Haunted Bicycle</title>
+  <meta name="description" content="Skill Weaver has been submitted to SIGCSE TS 2027. We'll be back soon.">
   <link rel="canonical" href="https://hauntedbicycle.dev/index.html">
   <link rel="icon" type="image/svg+xml" href="/assets/svg/logo-mark.svg">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="The Haunted Bicycle — Skill Weaver Engineering Journal">
-  <meta property="og:description" content="Architecture decisions, testing stories, and adaptive assessment research, told through Monster, Spider, and Bicycle.">
+  <meta property="og:title" content="We'll be back soon — The Haunted Bicycle">
+  <meta property="og:description" content="Skill Weaver has been submitted to SIGCSE TS 2027. We'll be back soon.">
   <meta property="og:url" content="https://hauntedbicycle.dev/index.html">
   <meta property="og:image" content="https://hauntedbicycle.dev/assets/images/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Haunted Bicycle — Skill Weaver Engineering Journal">
-  <meta name="twitter:description" content="Architecture decisions, testing stories, and adaptive assessment research, told through Monster, Spider, and Bicycle.">
+  <meta name="twitter:title" content="We'll be back soon — The Haunted Bicycle">
+  <meta name="twitter:description" content="Skill Weaver has been submitted to SIGCSE TS 2027. We'll be back soon.">
   <meta name="twitter:image" content="https://hauntedbicycle.dev/assets/images/og-default.png">
-
-  <link rel="alternate" type="application/rss+xml" title="The Haunted Bicycle" href="/rss.xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -29,117 +27,65 @@
   <link rel="stylesheet" href="/assets/css/components.css">
 
   <style>
-    @keyframes float-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .placeholder-cast {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 48px;
+      padding-block: 8px 24px;
+    }
+    .placeholder-cast img {
+      width: min(180px, 28vw);
+      height: auto;
+    }
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "The Haunted Bicycle",
-    "description": "The engineering journal of the Skill Weaver project.",
-    "url": "https://hauntedbicycle.dev/"
-  }
-  </script>
 </head>
-<body>
+<body class="home">
 
-<div data-include="header"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/index.html">
+      <span class="brand__text">
+        <span class="brand__title">The Haunted Bicycle</span>
+        <span class="brand__eyebrow">Skill Weaver</span>
+      </span>
+    </a>
+  </div>
+</header>
 
 <main id="main" style="max-width: 1152px; margin-inline: auto; padding-inline: 24px;">
 
-  <!-- HERO: banner on top, stretched text below, centered buttons -->
-  <section style="display: flex; flex-direction: column; align-items: stretch; gap: 16px; padding-block: 8px;">
+  <section class="hero">
     <div style="width: 100%; animation: float-in 600ms cubic-bezier(0.16,1,0.3,1) both;">
-      <img src="/assets/images/BannerGif.gif" alt="A small ghost monster pedals a bicycle whose rear wheel is spun from spider silk, trailing a dashed motion line." width="520" height="420" style="width: 100%; height: auto; display: block;">
+      <img src="/assets/images/BannerGif.gif" alt="A small ghost pedals a bicycle whose rear wheel is spun from spider silk, trailing a dashed motion line." width="520" height="420" style="width: 100%; height: auto; display: block;">
     </div>
-    <div style="width: 100%; text-align: justify; text-wrap: pretty;">
-      <h1 style="margin: 0 0 16px; text-align: justify;">Every Software has ghosts.<br> We write about ours.</h1>
-      <p style="font-size: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem); color: #66717E; width: 100%; max-width: none; margin: 0 0 16px; text-align: justify;">The Haunted Bicycle documents the architecture decisions, testing stories, and adaptive assessment research behind the Skill Weaver project. Told through a Vampire, a Ghost, and a spider trying to keep a bicycle spinning.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;">
-        <a href="/about.html" style="display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14px; text-decoration: none; padding: 12px 24px; border-radius: 3px; border: 1.5px solid #30343B; background: #30343B; color: #F7FAFC;">What is this place?</a>
-      </div>
+    <div class="hero__copy" style="text-align: center;">
+      <h1 style="margin: 0 0 16px; text-align: center;">We'll be back soon.</h1>
+      <p class="hero__lede" style="margin-inline: auto; text-align: center;">Skill Weaver has been submitted to SIGCSE TS 2027.</p>
     </div>
   </section>
 
-  <div style="width: 100%; height: 32px; margin-block: 8px; overflow: hidden;">
+  <div class="thread-divider">
     <img src="/assets/svg/thread-divider.svg" alt="" role="presentation" style="width: 100%; height: 100%;">
   </div>
 
-  <!-- START HERE 
-  <section style="padding-block: 8px;">
-    <div style="margin-bottom: 12px;">
-      <h2 style="margin: 0;">Start here</h2>
-    </div>
-    <a href="/posts/why-the-bicycle-is-haunted.html" style="display: flex; align-items: flex-start; gap: 32px; max-width: 46rem; text-decoration: none; color: inherit;">
-      <img src="/assets/svg/character-bicycle.svg" alt="" width="72" height="72" style="width: 72px; height: 72px; flex-shrink: 0;">
-      <div style="display: flex; flex-direction: column; gap: 12px; min-width: 0;">
-        <span style="display: inline-flex; align-items: center; align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.03em; text-transform: uppercase; padding: 0.3em 0.7em; border-radius: 999px; border: 1px solid #66717E; color: #66717E;">Craft</span>
-        <h3 style="margin: 0;">Why the Bicycle Is Haunted</h3>
-        <p style="color: #66717E; font-size: 18px; margin: 0;">A manifesto, of sorts: why we named a system that gets built, breaks, and gets rebuilt after something with a mind of its own — and why every complex codebase eventually earns a ghost.</p>
-        <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #66717E; display: flex; gap: 12px; margin: 4px 0 0;"><span>Manju</span><span>&middot;</span><span>7 min read</span></p>
-      </div>
-    </a>
-  </section> -->
-
-  <!-- LATEST POSTS: 3-across carousel -->
-  <section id="latest" style="padding-block: 8px;">
-    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 12px;">
-      <h2 style="margin: 0;">Latest posts</h2>
-      <a href="/archive.html" style="text-decoration: none; color: #30343B; font-family: 'Space Grotesk', sans-serif; font-size: 14px;">View full archive &rarr;</a>
-    </div>
-    <div style="position: relative; display: flex; align-items: center; gap: 12px;">
-      <button aria-label="Scroll left" onclick="document.getElementById('carousel').scrollBy({left: -document.getElementById('carousel').clientWidth * 0.9, behavior: 'smooth'})" style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #248F8D; background: #FFFFFF; color: #248F8D; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center;">&larr;</button>
-      <div id="carousel" data-latest-posts style="display: flex; gap: 24px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none; padding-block: 4px; flex: 1;"></div>
-      <button aria-label="Scroll right" onclick="document.getElementById('carousel').scrollBy({left: document.getElementById('carousel').clientWidth * 0.9, behavior: 'smooth'})" style="flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #248F8D; background: #FFFFFF; color: #248F8D; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center;">&rarr;</button>
-    </div>
-  </section>
-
-  <div style="width: 100%; height: 32px; margin-block: 8px; overflow: hidden;">
-    <img src="/assets/svg/thread-divider.svg" alt="" role="presentation" style="width: 100%; height: 100%;">
-  </div>
-
-  <!-- CONTRIBUTORS -->
-  <section style="padding-block: 8px;">
-    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 12px;">
-      <h2 style="margin: 0;">Who's writing this</h2>
-      <a href="/contributors.html" style="text-decoration: none; color: #30343B; font-family: 'Space Grotesk', sans-serif; font-size: 14px;">All contributors &rarr;</a>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); max-width: 640px; margin-inline: auto; gap: 32px;">
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 32px 24px; border: 1px solid #D0D9E3; border-radius: 6px; background: #FFFFFF;">
-        <img src="assets/images/IconManju.png" alt="" width="64" height="64" style="width: 80px; height: 80px; border-radius: 50%; background: #E8EEF4;">
-        <div>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #1B6A68; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px;">Pedagogy &middot; Adaptive Assessment &middot; Principal Bicycle Exorcist</p>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #1b365d; font-size: 18px; margin: 0;">Manju</h3>
-        </div>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 32px 24px; border: 1px solid #D0D9E3; border-radius: 6px; background: #FFFFFF;">
-        <img src="assets/images/IconJesus.png" alt="" width="64" height="64" style="width: 80px; height: 80px; border-radius: 50%; background: #E8EEF4;">
-        <div>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #1B6A68; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px;">System Architecture &middot; DevOps &middot; Docker Necromancer</p>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #1b365d; font-size: 18px; margin: 0;">Jesus</h3>
-        </div>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 32px 24px; border: 1px solid #D0D9E3; border-radius: 6px; background: #FFFFFF;">
-        <img src="assets/images/IconBricen.png" alt="" width="64" height="64" style="width: 80px; height: 80px; border-radius: 50%; background: #E8EEF4;">
-        <div>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #1B6A68; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px;">UI/UX Engineering &middot; Testing &middot; Button Relocation Specialist</p>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #1b365d; font-size: 18px; margin: 0;">Bricen</h3>
-        </div>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 32px 24px; border: 1px solid #D0D9E3; border-radius: 6px; background: #FFFFFF;">
-        <img src="/assets/images/IconBryce.png" alt="" width="64" height="64" style="width: 80px; height: 80px; border-radius: 50%; background: #E8EEF4;">
-        <div>
-          <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #1B6A68; text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 8px;">Illustration &middot; Human Generated Graphics &middot; Monster Wrangler</p>
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: #1b365d; font-size: 18px; margin: 0;">Bryce</h3>
-        </div>
-      </div>
-    </div>
+  <section class="placeholder-cast" aria-label="Illustrations">
+    <img src="/assets/images/IconVamp.png" alt="A vampire." width="180" height="180">
+    <img src="/assets/images/IconGhost.png" alt="A ghost." width="180" height="180">
+    <img src="/assets/images/IconSpider.png" alt="A spider." width="180" height="180">
   </section>
 
 </main>
 
-<div data-include="footer"></div>
-<script src="/assets/js/main.js"></script>
+<footer class="site-footer">
+  <div class="wrap site-footer__bottom">
+    <span>The Haunted Bicycle</span>
+    <span>We'll be back soon.</span>
+  </div>
+</footer>
+
 </body>
 </html>
